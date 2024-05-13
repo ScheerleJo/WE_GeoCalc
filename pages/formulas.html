@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles.css">
+    <title>Formelsammlung - Geo Calculator</title>
+    <script src="../scripts/showInformation.js"></script>
+</head>
+<body onload="hideEverythingElse('none')">
+    <h1>Formelsammlung geometrischer Figuren</h1>
+    <h2>2D</h2>
+    <button onclick="showInformation('square')"><img src="../assets/2D/square.png" alt="Quadrat"></button>
+    <button onclick="showInformation('rectangle')"><img src="../assets/2D/rectangle.png" alt="Rechteck"></button>
+    <button onclick="showInformation('triangle')"><img src="../assets/2D/triangle.png" alt="Dreick"></button>
+    <button onclick="showInformation('circle')"><img src="../assets/2D/circle.png" alt="Kreis"></button>
+    <button onclick="showInformation('rhombus')"><img src="../assets/2D/rhombus.png" alt="Raute"></button>
+
+    <section class="info" id="info-square">
+        <h3>Quadrat</h3>
+        <p>Flächenberechnung: A = a * a</p>
+    </section>
+    <section class="info" id="info-rectangle">
+        <h3>Rechteck</h3>
+        <p>Flächenberechnung: A = a * b</p> 
+    </section>
+    <section class="info" id="info-triangle">
+        <h3>Dreieck</h3>
+        <p>Flächenberechnung: A = 0.5 * a * h</p>
+    </section>
+    <section class="info" id="info-circle">
+        <h3>Kreis</h3>
+        <p>Flächenberechnung: A = π * r^2</p>
+    </section>
+    <section class="info" id="info-rhombus">
+        <h3>Raute</h3>
+        <p></p>
+    </section>
+
+    <h2>3D</h2>
+    <button onclick="showInformation('cube')"><img src="../assets/3D/cube.png" alt="Würfel"></button>
+    <button onclick="showInformation('cuboid')"><img src="../assets/3D/cuboid.png" alt="Quader"></button>
+    <button onclick="showInformation('pyramid')"><img src="../assets/3D/pyramid.png" alt="Pyramide"></button>
+    <button onclick="showInformation('sphere')"><img src="../assets/3D/sphere.png" alt="Kugel"></button>
+
+    <section class="info" id="info-cube">
+        <h3>Würfel</h3>
+        <p>Volumenberechnung: V = a * a * a</p> 
+    </section>
+    <section class="info" id="info-cuboid">
+        <h3>Quader</h3>
+        <p>Volumenberechnung:  V = a * b * c</p>
+    </section>
+    <section class="info" id="info-pyramid">
+        <h3>Pyramide</h3>
+        <p>Volumenberechnung: V = 1/3 * G * h</p>
+    </section>
+    <section class="info" id="info-sphere">
+        <h3>Kugel</h3>
+        <p>Volumenberechnung: V = 4/3 * π * r^3</p>
+    </section>
+</body>
+</html>

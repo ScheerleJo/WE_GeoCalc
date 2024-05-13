@@ -1,0 +1,40 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+html {
+    height: 100%;
+    width: 100%;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: auto;
+
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+    
+iframe  {
+    width: 95%;
+    min-height: 200px;
+    height: auto;
+    border: none;
+}
+
+.main-body{
+    margin: 10px;
+}
+
+button img {
+    width: 30px;
+    height: 30px;
+}
+
+button {
+    width: 100px;
+}
