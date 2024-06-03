@@ -1,0 +1,21 @@
+# Tags To Use
+
+- [ ] h5
+- [ ] h6
+- [x] hr
+- [ ] b
+- [ ] i
+- [ ] em
+- [ ] small
+- [ ] sup
+- [ ] sub
+- [ ] br
+- [ ] a
+- [x] img
+- [x] ul
+- [ ] ol
+- [ ] table
+- [ ] colspan
+- [ ] rowspan
+- [ ] aside
+- [ ] article

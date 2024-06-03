@@ -38,3 +38,32 @@ button img {
 button {
     width: 100px;
 }
+
+#logo {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+header * {
+    align-items: center;
+    display: inline-flex;
+
+}
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    margin: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+#last-edited {
+    align-self: right;
+    justify-self: right;
+}
