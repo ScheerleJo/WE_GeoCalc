@@ -9,158 +9,165 @@
 </head>
 <body onload="hideEverythingElse('none')">
     <header>
-        <img src="./assets/2D/shapes.png" alt="Logo" id="logo">
-        <h1>Formelsammlung geometrischer Figuren</h1>
+        <a href="../index.html"><img src="../assets/2D/shapes.png" alt="Logo"></a>
+        <h1>Formelsammlung</h1>
     </header>
     <nav>
         <ul>
-            <li><a href="./pages/formulas.html">Formelsammlung</a></li>
-            <li><a href="./pages/calculator.html">Rechner</a></li>
+            <li><a href="../index.html">Startseite</a></li>
+            <li><a href="#">Formelsammlung</a></li>
+            <li><a href="./calculator.html">Rechner</a></li>
         </ul>
     </nav>
-    <h2>2D</h2>
-    <button onclick="showInformation('square')"><img src="../assets/2D/square.png" alt="Quadrat"></button>
-    <button onclick="showInformation('rectangle')"><img src="../assets/2D/rectangle.png" alt="Rechteck"></button>
-    <button onclick="showInformation('triangle')"><img src="../assets/2D/triangle.png" alt="Dreick"></button>
-    <button onclick="showInformation('circle')"><img src="../assets/2D/circle.png" alt="Kreis"></button>
-    <button onclick="showInformation('rhombus')"><img src="../assets/2D/rhombus.png" alt="Raute"></button>
+    <main>
+        <article class="formulas">
+            <h2>2D</h2>
+            <button onclick="showInformation('square')"><img src="../assets/2D/square.png" alt="Quadrat"></button>
+            <button onclick="showInformation('rectangle')"><img src="../assets/2D/rectangle.png" alt="Rechteck"></button>
+            <button onclick="showInformation('triangle')"><img src="../assets/2D/triangle.png" alt="Dreick"></button>
+            <button onclick="showInformation('circle')"><img src="../assets/2D/circle.png" alt="Kreis"></button>
+            <button onclick="showInformation('rhombus')"><img src="../assets/2D/rhombus.png" alt="Raute"></button>
+    
+            <section class="info" id="info-square">
+                <h3>Quadrat</h3>
+                <h4>Flächenberechnung</h4>
+                <div>
+                    <math xmlns = "http://www.w3.org/1998/Math/MathML">
+                        <mi>A</mi>
+                        <mo>=</mo>
+                        <mi>a</mi>
+                        <mo>&middot</mo>
+                        <mi>a</mi>
+                    </math>
+                </div>
+            </section>
+            <section class="info" id="info-rectangle">
+                <h3>Rechteck</h3>
+                <h4>Flächenberechnung</h4> 
+                <div>
+                    <math xmlns = "http://www.w3.org/1998/Math/MathML">
+                        <mi>A</mi>
+                        <mo>=</mo>
+                        <mi>a</mi>
+                        <mo>&middot</mo>
+                        <mi>b</mi>
+                    </math>
+                </div>
+            </section>
+            <section class="info" id="info-triangle">
+                <h3>Dreieck</h3>
+                <h4>Flächenberechnung</h4>
+                <div>
+                    <math xmlns = "http://www.w3.org/1998/Math/MathML">
+                        <mi>A</mi>
+                        <mo>=</mo>
+                        <mn>0,5</mn>
+                        <mo>&middot</mo>
+                        <mi>a</mi>
+                        <mo>&middot</mo>
+                        <mi>h</mi>
+                    </math>
+                </div>
+            </section>
+            <section class="info" id="info-circle">
+                <h3>Kreis</h3>
+                <h4>Flächenberechnung</h4>
+                <div>
+                    <math xmlns = "http://www.w3.org/1998/Math/MathML">
+                        <mi>A</mi>
+                        <mo>=</mo>
+                        <mi>π</mi>
+                        <mo>&middot</mo>
+                        <msup>
+                            <mi>r</mi>
+                            <mn>2</mn>
+                        </msup>
+                    </math>
+                </div>    
+            </section>
+            <section class="info" id="info-rhombus">
+                <h3>Raute</h3>
+                <h4></h4>
+            </section>
+        </article>
+        <hr>
+        <article class="formulas">
 
-    <section class="info" id="info-square">
-        <h3>Quadrat</h3>
-        <h4>Flächenberechnung</h4>
-        <div>
-            <math xmlns = "http://www.w3.org/1998/Math/MathML">
-                <mi>A</mi>
-                <mo>=</mo>
-                <mi>a</mi>
-                <mo>&middot</mo>
-                <mi>a</mi>
-            </math>
-        </div>
-    </section>
-    <section class="info" id="info-rectangle">
-        <h3>Rechteck</h3>
-        <h4>Flächenberechnung</h4> 
-        <div>
-            <math xmlns = "http://www.w3.org/1998/Math/MathML">
-                <mi>A</mi>
-                <mo>=</mo>
-                <mi>a</mi>
-                <mo>&middot</mo>
-                <mi>b</mi>
-            </math>
-        </div>
-    </section>
-    <section class="info" id="info-triangle">
-        <h3>Dreieck</h3>
-        <h4>Flächenberechnung</h4>
-        <div>
-            <math xmlns = "http://www.w3.org/1998/Math/MathML">
-                <mi>A</mi>
-                <mo>=</mo>
-                <mn>0,5</mn>
-                <mo>&middot</mo>
-                <mi>a</mi>
-                <mo>&middot</mo>
-                <mi>h</mi>
-            </math>
-        </div>
-    </section>
-    <section class="info" id="info-circle">
-        <h3>Kreis</h3>
-        <h4>Flächenberechnung</h4>
-        <div>
-            <math xmlns = "http://www.w3.org/1998/Math/MathML">
-                <mi>A</mi>
-                <mo>=</mo>
-                <mi>π</mi>
-                <mo>&middot</mo>
-                <msup>
-                    <mi>r</mi>
-                    <mn>2</mn>
-                </msup>
-            </math>
-        </div>
-
-    </section>
-    <section class="info" id="info-rhombus">
-        <h3>Raute</h3>
-        <h4></h4>
-    </section>
-    <hr>
-    <h2>3D</h2>
-    <button onclick="showInformation('cube')"><img src="../assets/3D/cube.png" alt="Würfel"></button>
-    <button onclick="showInformation('cuboid')"><img src="../assets/3D/cuboid.png" alt="Quader"></button>
-    <button onclick="showInformation('pyramid')"><img src="../assets/3D/pyramid.png" alt="Pyramide"></button>
-    <button onclick="showInformation('sphere')"><img src="../assets/3D/sphere.png" alt="Kugel"></button>
-
-    <section class="info" id="info-cube">
-        <h3>Würfel</h3>
-        <h4>Volumenberechnung</h4>
-        <div>
-            <math xmlns = "http://www.w3.org/1998/Math/MathML">
-                <mi>V</mi>
-                <mo>=</mo>
-                <msup>
-                    <mi>a</mi>
-                    <mn>3</mn>
-                </msup>
-            </math>
-        </div> 
-    </section>
-    <section class="info" id="info-cuboid">
-        <h3>Quader</h3>
-        <h4>Volumenberechnung</h4>
-        <div>
-            <math xmlns = "http://www.w3.org/1998/Math/MathML">
-                <mi>V</mi>
-                <mo>=</mo>
-                <mi>a</mi>
-                <mo>&middot</mo>
-                <mi>b</mi>
-                <mo>&middot</mo>
-                <mi>c</mi>
-            </math>
-        </div>
-    </section>
-    <section class="info" id="info-pyramid">
-        <h3>Pyramide</h3>
-        <h4>Volumenberechnung</h4>
-        <div>
-            <math xmlns = "http://www.w3.org/1998/Math/MathML">
-                <mi>V</mi>
-                <mo>=</mo>
-                <mfrac>
-                    <mn>1</mn>
-                    <mn>3</mn>
-                </mfrac>
-                <mo>&middot</mo>
-                <mi>G</mi>
-                <mo>&middot</mo>
-                <mi>h</mi>
-            </math>
-        </div>
-    </section>
-    <section class="info" id="info-sphere">
-        <h3>Kugel</h3>
-        <h4>Volumenberechnung</h4>
-        <div>
-            <math xmlns = "http://www.w3.org/1998/Math/MathML">
-                <mi>V</mi>
-                <mo>=</mo>
-                <mfrac>
-                    <mn>4</mn>
-                    <mn>3</mn>
-                </mfrac>
-                <mo>&middot</mo>
-                <mi>π</mi>
-                <mo>&middot</mo>
-                <msup>
-                    <mi>r</mi>
-                    <mn>3</mn>
-                </msup>
-            </math>
-        </div>
-    </section>
+            <h2>3D</h2>
+            <button onclick="showInformation('cube')"><img src="../assets/3D/cube.png" alt="Würfel"></button>
+            <button onclick="showInformation('cuboid')"><img src="../assets/3D/cuboid.png" alt="Quader"></button>
+            <button onclick="showInformation('pyramid')"><img src="../assets/3D/pyramid.png" alt="Pyramide"></button>
+            <button onclick="showInformation('sphere')"><img src="../assets/3D/sphere.png" alt="Kugel"></button>
+        
+            <section class="info" id="info-cube">
+                <h3>Würfel</h3>
+                <h4>Volumenberechnung</h4>
+                <div>
+                    <math xmlns = "http://www.w3.org/1998/Math/MathML">
+                        <mi>V</mi>
+                        <mo>=</mo>
+                        <msup>
+                            <mi>a</mi>
+                            <mn>3</mn>
+                        </msup>
+                    </math>
+                </div> 
+            </section>
+            <section class="info" id="info-cuboid">
+                <h3>Quader</h3>
+                <h4>Volumenberechnung</h4>
+                <div>
+                    <math xmlns = "http://www.w3.org/1998/Math/MathML">
+                        <mi>V</mi>
+                        <mo>=</mo>
+                        <mi>a</mi>
+                        <mo>&middot</mo>
+                        <mi>b</mi>
+                        <mo>&middot</mo>
+                        <mi>c</mi>
+                    </math>
+                </div>
+            </section>
+            <section class="info" id="info-pyramid">
+                <h3>Pyramide</h3>
+                <h4>Volumenberechnung</h4>
+                <div>
+                    <math xmlns = "http://www.w3.org/1998/Math/MathML">
+                        <mi>V</mi>
+                        <mo>=</mo>
+                        <mfrac>
+                            <mn>1</mn>
+                            <mn>3</mn>
+                        </mfrac>
+                        <mo>&middot</mo>
+                        <mi>G</mi>
+                        <mo>&middot</mo>
+                        <mi>h</mi>
+                    </math>
+                </div>
+            </section>
+            <section class="info" id="info-sphere">
+                <h3>Kugel</h3>
+                <h4>Volumenberechnung</h4>
+                <div>
+                    <math xmlns = "http://www.w3.org/1998/Math/MathML">
+                        <mi>V</mi>
+                        <mo>=</mo>
+                        <mfrac>
+                            <mn>4</mn>
+                            <mn>3</mn>
+                        </mfrac>
+                        <mo>&middot</mo>
+                        <mi>π</mi>
+                        <mo>&middot</mo>
+                        <msup>
+                            <mi>r</mi>
+                            <mn>3</mn>
+                        </msup>
+                    </math>
+                </div>
+            </section>
+        </article>
+    </main>
 </body>
 </html>

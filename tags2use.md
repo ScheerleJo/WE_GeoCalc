@@ -14,8 +14,8 @@
 - [x] img
 - [x] ul
 - [ ] ol
-- [ ] table
-- [ ] colspan
+- [x] table
+- [x] colspan
 - [ ] rowspan
 - [ ] aside
-- [ ] article
+- [x] article

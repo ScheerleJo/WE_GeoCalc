@@ -1,6 +1,8 @@
 * {
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
+    color: #222;
+
 }
 
 html {
@@ -13,15 +15,17 @@ html {
 
 body {
     height: auto;
-
     width: 100%;
     margin: 0;
     padding: 0;
 }
+a:visited, a:link{
+    color: #222;
+}
     
 iframe  {
     width: 95%;
-    min-height: 200px;
+    min-height: 400px;
     height: auto;
     border: none;
 }
@@ -38,11 +42,17 @@ button img {
 button {
     width: 100px;
 }
-
-#logo {
+header a {
+    text-decoration: none;
+    padding: 5px;
+    margin-right: 5px;
+}
+header a img {
     width: 30px;
     height: 30px;
-    margin-right: 10px;
+}
+header h1 {
+    color: white
 }
 header * {
     align-items: center;
@@ -59,11 +69,53 @@ header {
     align-items: center;
     justify-content: center;
 }
-
-
-
+article {
+    margin: 0 1em;
+}
 
 #last-edited {
     align-self: right;
     justify-self: right;
+}
+nav ul li a {
+    text-decoration: none;
+    padding: 10px;
+}
+nav ul li {
+    display: inline-flex;
+    margin: 0 10px;
+}
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+nav {
+    background-color: #eee;
+    padding: 5px;
+    margin: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: black 1px solid;
+}
+nav ul li a:hover, header a:hover {
+    color: #333;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+.formulas {
+    width: 90%;
+    align-self: center;
 }
