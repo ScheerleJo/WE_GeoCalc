@@ -15,13 +15,19 @@
     <nav>
         <ul>
             <li><a href="../index.html">Startseite</a></li>
-            <li><a href="#">Formelsammlung</a></li>
+            <li>
+                <a>Formelsammlung</a>
+                <ol class="dropdown-list">
+                    <li><a href="#formulas-2D"><i class="fa-regular fa-square"></i>2D</a></li>
+                    <li><a href="#formulas-3D"><i class="fa-regular fa-cube"></i>3D</a></li>
+                </ol>
+            </li>
             <li><a href="./calculator.html">Rechner</a></li>
         </ul>
     </nav>
     <main>
         <article class="formulas">
-            <h2>2D</h2>
+            <h2 id="formulas-2d">2D</h2>
             <button onclick="showInformation('square')"><img src="../assets/2D/square.png" alt="Quadrat"></button>
             <button onclick="showInformation('rectangle')"><img src="../assets/2D/rectangle.png" alt="Rechteck"></button>
             <button onclick="showInformation('triangle')"><img src="../assets/2D/triangle.png" alt="Dreick"></button>
@@ -40,6 +46,8 @@
                         <mi>a</mi>
                     </math>
                 </div>
+                <h5>Erklärung</h5>
+                <p>Die Fläche eines Quadrats berechnet sich aus der Seitenlänge a, die mit sich selbst multipliziert wird.</p>
             </section>
             <section class="info" id="info-rectangle">
                 <h3>Rechteck</h3>
@@ -93,7 +101,7 @@
         <hr>
         <article class="formulas">
 
-            <h2>3D</h2>
+            <h2 id="formulas-3d">3D</h2>
             <button onclick="showInformation('cube')"><img src="../assets/3D/cube.png" alt="Würfel"></button>
             <button onclick="showInformation('cuboid')"><img src="../assets/3D/cuboid.png" alt="Quader"></button>
             <button onclick="showInformation('pyramid')"><img src="../assets/3D/pyramid.png" alt="Pyramide"></button>

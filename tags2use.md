@@ -6,14 +6,14 @@
 - [ ] b
 - [ ] i
 - [ ] em
-- [ ] small
+- [x] small
 - [ ] sup
 - [ ] sub
 - [ ] br
-- [ ] a
+- [x] a
 - [x] img
 - [x] ul
-- [ ] ol
+- [x] ol
 - [x] table
 - [x] colspan
 - [ ] rowspan

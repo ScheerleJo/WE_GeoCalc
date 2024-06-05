@@ -6,16 +6,23 @@
     <link rel="stylesheet" href="styles.css">
     <title>Startseite - GeoCalculator</title>
     <link rel="icon" href="assets/2D/shapes.png" type="image/x-icon"/>
+    <script src="https://kit.fontawesome.com/7af999501d.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
-        <a href="#"><img src="../assets/2D/shapes.png" alt="Logo"></a>
+        <a><img src="../assets/2D/shapes.png" alt="Logo"></a>
         <h1>Willkommen beim Geo Calculator</h1>
     </header>
     <nav>
         <ul>
-            <li><a href="#">Startseite</a></li>
-            <li><a href="./pages/formulas.html">Formelsammlung</a></li>
+            <li><a>Startseite</a></li>
+            <li>
+                <a href="./pages/formulas.html">Formelsammlung</a>
+                <ol class="dropdown-list">
+                    <li><a href="./pages/formulas.html#formulas-2D"><i class="fa-regular fa-square"></i>2D</a></li>
+                    <li><a href="./pages/formulas.html#formulas-3D"><i class="fa-regular fa-cube"></i>3D</a></li>
+                </ol>
+            </li>
             <li><a href="./pages/calculator.html">Rechner</a></li>
         </ul>
     </nav>
@@ -23,11 +30,11 @@
         <iframe src="./pages/intro.html" frameborder="0"></iframe>
     </main>
 
-    <address>
-        Geschrieben von: <a href="mailto:info@scheerlestudios.de">Josia Scheerle</a>
-    </address>
+
     <footer>
-        <p id="last-edited">© <time datetime="2024-06-03">03.06.2024</time> - GeoCalculator</p>
+        <address>
+            Geschrieben von: <a href="mailto:info@scheerlestudios.de">Josia Scheerle</a>
+        </address>
+        <p id="last-edited"><small>© <time datetime="2024-06-03">03.06.2024</time> - GeoCalculator</small></p>
     </footer>
 </body>
-</html>

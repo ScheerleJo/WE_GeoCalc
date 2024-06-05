@@ -105,6 +105,38 @@ nav ul li a:hover, header a:hover {
     background-color: rgba(0, 0, 0, 0.1);
     border-radius: 5px;
 }
+.dropdown-list li {
+    width: 100%;
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin: 0;
+}
+.dropdown-list {
+    margin-top: 2.5em;
+    width: 100%;
+    display: none;
+    position: absolute;
+    list-style: none;
+    background-color: #eee;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+    padding: 5px;
+    border-radius: 10px;
+    z-index: 10;
+    width: auto;
+}
+.dropdown-list li a {
+    display: block;
+    width: auto;
+}
+.dropdown-list li a i{
+    margin-right: 5px;
+    width: 1.2em;
+}
+nav ul li:hover ol {
+    display: block;
+}  
 
 main {
     display: flex;
