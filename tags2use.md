@@ -1,6 +1,6 @@
 # Tags To Use
 
-- [ ] h5
+- [x] h5
 - [ ] h6
 - [x] hr
 - [ ] b
@@ -17,5 +17,5 @@
 - [x] table
 - [x] colspan
 - [ ] rowspan
-- [ ] aside
+- [x] aside
 - [x] article

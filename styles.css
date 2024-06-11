@@ -2,7 +2,6 @@
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
     color: #222;
-
 }
 
 html {
@@ -34,7 +33,7 @@ iframe  {
     margin: 10px;
 }
 
-button img {
+button > img {
     width: 30px;
     height: 30px;
 }
@@ -100,7 +99,7 @@ nav {
     justify-content: center;
     border-top: black 1px solid;
 }
-nav ul li a:hover, header a:hover {
+nav a:hover, header a:hover {
     color: #333;
     background-color: rgba(0, 0, 0, 0.1);
     border-radius: 5px;
@@ -150,4 +149,9 @@ main {
 .formulas {
     width: 90%;
     align-self: center;
+}
+hr {
+    width: 92%;
+    height: 1px;
+    margin-top: 15px;
 }
