@@ -1,11 +1,13 @@
-# Tags To Use
+# ToDos
+
+## Tags To Use
 
 - [x] h5
 - [ ] h6
 - [x] hr
 - [ ] b
 - [ ] i
-- [ ] em
+- [x] em
 - [x] small
 - [ ] sup
 - [ ] sub
@@ -19,3 +21,12 @@
 - [ ] rowspan
 - [x] aside
 - [x] article
+
+## CSS
+
+- [ ] E+N
+- [x] S~E
+- [x] ::before
+- [x] ::after
+
+
