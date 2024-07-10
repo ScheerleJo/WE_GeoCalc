@@ -174,6 +174,9 @@ hr {
     height: 1px;
     margin-top: 15px;
 }
+aside + a:link, aside + a:visited {
+    text-decoration: none;
+}
 
 .button-wrapper {
     display: flex;
@@ -204,6 +207,15 @@ math + h5 {
     margin-bottom: 10px;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
 
 @media all and (min-width: 401px) {
     nav {
@@ -222,6 +234,7 @@ math + h5 {
         flex-direction: row;
     }
 }
+
 @media all and (max-width: 800px) {
     
     iframe {
@@ -248,6 +261,75 @@ math + h5 {
     }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

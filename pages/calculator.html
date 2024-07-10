@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="assets/2D/shapes.png" type="image/x-icon">
     <link rel="stylesheet" href="../styles.css">
+    <script src="../scripts/showInformation.js"></script>
+    <script src="../scripts/calculations.js"></script>
     <title>Rechner - Geo Calculator</title>
 </head>
 <body>
@@ -32,43 +34,29 @@
             <li><a>Rechner</a></li>
         </ul>
     </nav>
-    <input type="text" readonly value="0">
-    <table>
-        <caption>Rechner</caption>
-        <thead>
-            <tr>
-                <td><button>C</button></td>
-                <td colspan="2"><button>CE</button></td>
-                <td><button>DEL</button></td>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td><button>7</button></td>
-                <td><button>8</button></td>
-                <td><button>9</button></td>
-                <td><button>+</button></td>
-            </tr>
-            <tr>
-                <td><button>6</button></td>
-                <td><button>5</button></td>
-                <td><button>4</button></td>
-                <td><button>-</button></td>
-            </tr>
-            <tr>
-                <td><button>3</button></td>
-                <td><button>2</button></td>
-                <td><button>1</button></td>
-                <td><button>*</button></td>
-            </tr>
-            <tr>
-                <td><button>0</button></td>
-                <td><button>.</button></td>
-                <td><button>=</button></td>
-                <td><button>/</button></td>
-            </tr>
-        </tbody>
-    </table>
+
+    <label for="geometries">Figuren:</label>
+    <select name="geometries" id="geo-options">
+        <option value="square">Quadrat</option>
+        <option value="rectangle">Rechteck</option>
+        <option value="triangle">Dreieck</option>
+        <option value="circle">Kreis</option>
+        <option value="rhombus">Raute</option>
+        <option value="cube">Würfel</option>
+        <option value="cuboid">Quader</option>
+        <option value="pyramid">Pyramide</option>
+        <option value="cone">Kegel</option>
+        <option value="cylinder">Zylinder</option>
+        <option value="sphere">Kugel</option>
+    </select>
+
+    <input type="number" id="a">
+    <input type="number" id="b">
+
+    <button onclick="calculate()">Berechnen</button>
+
+    <input type="text" id="result" readonly placeholder="Ergebnis">
+    
 
     
 </body>

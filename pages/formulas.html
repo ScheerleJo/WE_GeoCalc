@@ -8,7 +8,7 @@
     <link rel="icon" href="assets/2D/shapes.png" type="image/x-icon">
     <script src="../scripts/showInformation.js"></script>
 </head>
-<body onload="hideEverythingElse('none')">
+<body onload="loadBody()">
     <header>
         <a href="../index.html"><img src="../assets/2D/shapes.png" alt="Logo"></a>
         <h1>Formelsammlung</h1>
@@ -33,7 +33,7 @@
             <li><a href="./calculator.html">Rechner</a></li>
         </ul>
     </nav>
-    <main>
+    <main id="formulas-main">
         <article class="formulas">
             <h2 id="formulas-2d">2D</h2>
             <div class="button-wrapper">
@@ -56,6 +56,7 @@
                 </math>
                 <h5>Erklärung</h5>
                 <aside>Die <em>Fläche</em> eines Quadrats berechnet sich aus der Seitenlänge a, die mit sich selbst multipliziert wird.</aside>
+                <a href="calculator.html"><button onclick="calcSquare()">Zum Rechner</button></a>
             </section>
             <section class="info" id="info-rectangle">
                 <h3>Rechteck</h3>
