@@ -4,6 +4,7 @@ function showInformation(geometry) {
     section.style.display = 'block';
     section.classList.add('active-info');
     document.getElementById('button-' + geometry).classList.add('active-button');
+    document.getElementById('reset-highlights').style.display = 'block';
 }
 function hideEverythingElse(geometry) {
     let sections = document.getElementsByClassName('info');
@@ -31,19 +32,25 @@ function hideBorders(){
     for (let i = 0; i < buttons.length; i++) {
         buttons[i].classList.remove('active-button');
     }
+    document.getElementById('formulas-2d').classList.remove('highlight');
+    document.getElementById('formulas-3d').classList.remove('highlight');
+    document.getElementById('reset-highlights').style.display = 'none';
 }
 
-
+function highlight2D (){
+    document.getElementById('formulas-2d').classList.add('highlight');
+}
+function highlight3D (){
+    document.getElementById('formulas-3d').classList.add('highlight');
+}
 
 
 
 function loadBody(){
     hideEverythingElse('none');
     listenOnKeyDown();
+    document.getElementById('reset-highlights').style.display = 'none';
 }
-
-
-
 
 
 function listenOnKeyDown() {
@@ -63,13 +70,10 @@ function listenOnKeyDown() {
 
 function hideEverythingButSphere() {
     console.log("Delete everything.... You better run!");;
-
-    Array.from(document.getElementsByClassName('info')).forEach(section => {if(section.id != 'info-sphere') section.remove()});
-    Array.from(document.getElementsByClassName('info-button')).forEach(button => {if(button.id != 'button-sphere') button.remove()});
+    document.querySelectorAll("section.info, button.info-button").forEach(element => {if(!element.id.includes('-sphere')) element.remove()});
     Array.from(document.getElementsByTagName('h2')).forEach(h2 => h2.remove());
-    document.getElementsByTagName("hr")[0].remove();
+    document.querySelector("hr").remove();
     showInformation('sphere');
 }
-function restoreEverything() {
-    window.location.reload();
-}
+
+function restoreEverything() { window.location.reload();}

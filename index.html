@@ -6,16 +6,18 @@
     <link rel="stylesheet" href="styles.css">
     <title>Startseite - GeoCalculator</title>
     <link rel="icon" href="assets/2D/shapes.png" type="image/x-icon">
-    <script src="https://kit.fontawesome.com/7af999501d.js" crossorigin="anonymous"></script>
 </head>
 <body>
+
+    <!-- ELEGANCE-Pattern; Consistency -->
+    <!-- Consistent Layout and Header for navigation on all pages -->
     <header>
         <a><img src="../assets/2D/shapes.png" alt="Logo"></a>
         <h1 id="index">Willkommen beim Geo Calculator</h1>
     </header>
     <nav>
         <div class="menu">
-            <a id="menu-list"><i class="fa-solid fa-bars"></i></a>
+            <a id="menu-list"><img src="./assets/bars-regular.svg" class="fa-big" alt=""></a>
             <ol class="dropdown-list" >
                 <li><a href="./pages/formulas.html">Formelsammlung</a></li>
                 <li><a href="./pages/calculator.html">Rechner</a></li>
@@ -26,25 +28,30 @@
             <li>
                 <a>Formelsammlung</a>
                 <ol class="dropdown-list">
-                    <li><a href="./pages/formulas.html#formulas-2D"><i class="fa-regular fa-square"></i>2D</a></li>
-                    <li><a href="./pages/formulas.html#formulas-3D"><i class="fa-regular fa-cube"></i>3D</a></li>
+                    <li><a href="./pages/formulas.html#formulas-2D"><img src="./assets/square-regular.svg" class="fa" alt=""></img>2D</a></li>
+                    <li><a href="./pages/formulas.html#formulas-3D"><img src="./assets/cube-regular.svg" class="fa" alt=""></img>3D</a></li>
                 </ol>
             </li>
             <li><a href="./pages/calculator.html">Rechner</a></li>
         </ul>
     </nav>
+
+    <!-- ELEGANCE Pattern: Empathy -->
+    <!-- Friendly Welcome to the page -->
     <main>
         <iframe src="./pages/intro.html"></iframe>
     </main>
 
 
     <footer>
-
-        Aufgabenstellung:<br><a id="moodle-link" href="https://elearning.dhbw-stuttgart.de/moodle/course/view.php?id=18217" target="_blank">Moodle der DHBW-Stuttgart</a>
-        
-        <address>
-            Geschrieben von:<br><a href="mailto:info@scheerlestudios.de">Josia Scheerle</a>
-        </address>
-        <p id="last-edited"><small>© <time datetime="2024-06-17">17.06.2024</time> - GeoCalculator</small></p>
+        <div id="footer-exercise">
+            <p>Aufgabenstellung:</p><a id="moodle-link" href="https://elearning.dhbw-stuttgart.de/moodle/course/view.php?id=18217" target="_blank">Moodle der DHBW-Stuttgart</a>
+        </div>
+        <div id="footer-address">
+            <address>
+                <p>Geschrieben von:</p><a href="mailto:info@scheerlestudios.de">Josia Scheerle</a>
+            </address>
+        </div>
+        <p id="last-edited"><small>© <time datetime="2024-07-11">11.07.2024</time> - GeoCalculator</small></p>
     </footer>
 </body>

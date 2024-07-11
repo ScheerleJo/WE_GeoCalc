@@ -7,6 +7,8 @@
     <title>Formelsammlung - Geo Calculator</title>
     <link rel="icon" href="assets/2D/shapes.png" type="image/x-icon">
     <script src="../scripts/showInformation.js"></script>
+    <script src="../scripts/calculations.js"></script>
+    <link rel="icon" href="../assets/2D/shapes.png" type="image/x-icon">
 </head>
 <body onload="loadBody()">
     <header>
@@ -15,7 +17,7 @@
     </header>
     <nav>
         <div class="menu">
-            <a id="menu-list"><i class="fa-solid fa-bars"></i></a>
+            <a id="menu-list"><img src="../assets/bars-regular.svg" class="fa-big" alt=""></a>
             <ol class="dropdown-list" >
                 <li><a href="../index.html">Startseite</a></li>
                 <li><a href="./calculator.html">Rechner</a></li>
@@ -26,18 +28,24 @@
             <li>
                 <a>Formelsammlung</a>
                 <ol class="dropdown-list">
-                    <li><a href="#formulas-2D"><i class="fa-regular fa-square"></i>2D</a></li>
-                    <li><a href="#formulas-3D"><i class="fa-regular fa-cube"></i>3D</a></li>
+                    <li><a href="#formulas-2D"><img src="../assets/square-regular.svg" class="fa" alt=""></img>2D</a></li>
+                    <li><a href="#formulas-3D"><img src="../assets/cube-regular.svg" class="fa" alt=""></img>3D</a></li>
+                    <li><a href="#formulas-overview">Übersicht</a></li>
+
                 </ol>
             </li>
             <li><a href="./calculator.html">Rechner</a></li>
         </ul>
     </nav>
+
+    <!-- ELEGANCE-Pattern: Essentialism -->
+    <!-- Mere Essential Information for the user on first glance  -->
+    <!-- Only when pressing the buttons, then the user gets more information to the wanted geometric figure-->
     <main id="formulas-main">
         <article>
         </article>
-        <article class="formulas">
-            <h2 id="formulas-2d">2D</h2>
+        <article id="formulas-2d" class="formulas">
+            <a href="#" id="header-2d" onclick="highlight2D()"><h2>2D</h2></a>
             <button id="button-square" class="info-button" onclick="showInformation('square')"><img src="../assets/2D/square.png" alt="Quadrat"></button>
             <section class="info" id="info-square">
                 <h3>Quadrat</h3>
@@ -45,7 +53,7 @@
                 <math xmlns = "http://www.w3.org/1998/Math/MathML"><mi>A</mi><mo>=</mo><mi>a</mi><mo>&middot</mo><mi>a</mi></math>
                 <h5>Erklärung</h5>
                 <aside>Die <em>Fläche</em> eines Quadrats berechnet sich aus der Seitenlänge a, die mit sich selbst multipliziert wird.</aside>
-                <a href="calculator.html"><button onclick="calcSquare()">Zum Rechner</button></a>
+                <a href="calculator.html"><button onclick="showCalcSquare()">Zum Rechner</button></a>
             </section>
             <button id="button-rectangle" class="info-button" onclick="showInformation('rectangle')"><img src="../assets/2D/rectangle.png" alt="Rechteck"></button>
             <section class="info" id="info-rectangle">
@@ -54,7 +62,7 @@
                 <math xmlns = "http://www.w3.org/1998/Math/MathML"><mi>A</mi><mo>=</mo><mi>a</mi><mo>&middot</mo><mi>b</mi></math>
                 <h5>Erklärung</h5>
                 <aside>Die <em>Fläche</em> eines Rechtecks berechnet sich aus der Länge a und der Breite b, die miteinander multipliziert werden.</aside>
-                <a href="calculator.html"><button onclick="calcRectangle()">Zum Rechner</button></a>
+                <a href="calculator.html"><button onclick="showCalcRectangle()">Zum Rechner</button></a>
             </section>
             <button id="button-triangle" class="info-button" onclick="showInformation('triangle')"><img src="../assets/2D/triangle.png" alt="Dreick"></button>
             <section class="info" id="info-triangle">
@@ -63,7 +71,7 @@
                 <math xmlns = "http://www.w3.org/1998/Math/MathML"><mi>A</mi><mo>=</mo><mn>0,5</mn><mo>&middot</mo><mi>a</mi><mo>&middot</mo><mi>h</mi></math>
                 <h5>Erklärung</h5>
                 <aside>Die <em>Fläche</em> eines Dreiecks berechnet sich aus der Grundseite a und der Höhe h, die miteinander multipliziert und durch 2 geteilt werden.</aside>
-                <a href="calculator.html"><button onclick="calcTriangle()">Zum Rechner</button></a>
+                <a href="calculator.html"><button onclick="showCalcTriangle()">Zum Rechner</button></a>
             </section>
             <button id="button-circle" class="info-button" onclick="showInformation('circle')"><img src="../assets/2D/circle.png" alt="Kreis"></button>
             <section class="info" id="info-circle">
@@ -73,13 +81,12 @@
                 <math xmlns = "http://www.w3.org/1998/Math/MathML"><mi>A</mi><mo>=</mo><mi>π</mi><mo>&middot</mo><msup><mi>r</mi><mn>2</mn></msup></math> 
                 <h5>Erklärung</h5>
                 <aside>Die <em>Fläche</em> eines Kreises berechnet sich aus dem Radius r, der quadriert und mit π multipliziert wird.</aside>
-                <a href="calculator.html"><button onclick="calcCircle()">Zum Rechner</button></a>
+                <a href="calculator.html"><button onclick="showCalcCircle()">Zum Rechner</button></a>
             </section>
         </article>
         <hr>
-        <article class="formulas">
-
-            <h2 id="formulas-3d">3D</h2>
+        <article id="formulas-3d" class="formulas">
+            <a href="#" id="header-3d" onclick="highlight3D()"><h2>3D</h2></a>
             <button id="button-cube" class="info-button" onclick="showInformation('cube')"><img src="../assets/3D/cube.png" alt="Würfel"></button>
             <section class="info" id="info-cube">
                 <h3>Würfel</h3>
@@ -87,7 +94,7 @@
                 <math xmlns = "http://www.w3.org/1998/Math/MathML"><mi>V</mi><mo>=</mo><msup><mi>a</mi><mn>3</mn></msup></math>
                 <h5>Erklärung</h5>
                 <aside>Das <em>Volumen</em> eines Würfels berechnet sich aus der Kantenlänge a, die mit sich selbst und noch einmal mit sich selbst multipliziert wird.</aside>
-                <a href="calculator.html"><button onclick="calcCube()">Zum Rechner</button></a>
+                <a href="calculator.html"><button onclick="showCalcCube()">Zum Rechner</button></a>
             </section>
             <button id="button-cuboid" class="info-button" onclick="showInformation('cuboid')"><img src="../assets/3D/cuboid.png" alt="Quader"></button>
             <section class="info" id="info-cuboid">
@@ -96,7 +103,7 @@
                 <math xmlns = "http://www.w3.org/1998/Math/MathML"><mi>V</mi><mo>=</mo><mi>a</mi><mo>&middot</mo><mi>b</mi><mo>&middot</mo><mi>c</mi></math>
                 <h5>Erklärung</h5>
                 <aside>Das <em>Volumen</em> eines Quaders berechnet sich aus den drei Seitenlängen a, b und c, die miteinander multipliziert werden.</aside>
-                <a href="calculator.html"><button onclick="calcCuboid()">Zum Rechner</button></a>
+                <a href="calculator.html"><button onclick="showCalcCuboid()">Zum Rechner</button></a>
             </section>
             <button id="button-pyramid" class="info-button" onclick="showInformation('pyramid')"><img src="../assets/3D/pyramid.png" alt="Pyramide"></button>
             <section class="info" id="info-pyramid">
@@ -105,6 +112,8 @@
                 <math xmlns = "http://www.w3.org/1998/Math/MathML"><mi>V</mi><mo>=</mo><mfrac><mn>1</mn><mn>3</mn></mfrac><mo>&middot</mo><mi>G</mi><mo>&middot</mo><mi>h</mi></math>
                 <h5>Erklärung</h5>
                 <aside>Das <em>Volumen</em> einer Pyramide berechnet sich aus der Grundfläche G und der Höhe h, die miteinander multipliziert und durch 3 geteilt werden.</aside>
+                <aside>Bei der Pyramide wird noch zusätzlich unterschieden, ob es um eine rechteckige oder dreieckige <em>Grundfläche</em> handelt.</aside>
+                <a href="calculator.html"><button onclick="showCalcPyramid()">Zum Rechner</button></a>
             </section>
             <button id="button-sphere" class="info-button" onclick="showInformation('sphere')"><img src="../assets/3D/sphere.png" alt="Kugel"></button>
             <section class="info" id="info-sphere">
@@ -113,13 +122,13 @@
                 <math xmlns = "http://www.w3.org/1998/Math/MathML"><mi>V</mi><mo>=</mo><mfrac><mn>4</mn><mn>3</mn></mfrac><mo>&middot</mo><mi>π</mi><mo>&middot</mo><msup><mi>r</mi><mn>3</mn></msup></math>
                 <h5>Erklärung</h5>
                 <aside>Das <em>Volumen</em> einer Kugel berechnet sich aus dem Radius r, der mit sich selbst und noch einmal mit sich selbst multipliziert wird. Das Ergebnis wird mit 4/3 und π multipliziert.</aside>
-                <a href="calculator.html"><button onclick="calcSphere()">Zum Rechner</button></a>
+                <a href="calculator.html"><button onclick="showCalcSphere()">Zum Rechner</button></a>
             </section>
         </article>
         <div id="formula-buttons" class="button-wrapper">
-            <button onclick="hideBorders()">Highlights zurücksetzen</button>
+            <button id="reset-highlights" onclick="hideBorders()">Erklärung schließen</button>
         </div>
-        <table>
+        <table id="formulas-overview">
             <caption>Übersicht der Formeln</caption>
             <tr>
                 <th colspan="3">2D</th>
@@ -139,31 +148,31 @@
                 <td>
                     <math xmlns = "http://www.w3.org/1998/Math/MathML"><mi>A</mi><mo>=</mo><mi>a</mi><mo>&middot</mo><mi>a</mi></math>
                 </td>
-                <td>
-                    <a href="calculator.html"><button onclick="calcSquare()">rechnen</button></a>
+                <td class="calc-button">
+                    <a href="calculator.html"><button onclick="showCalcSquare()">rechnen</button></a>
                 </td>
                 <td>Würfel</td>
                 <td>
                     <math xmlns = "http://www.w3.org/1998/Math/MathML"><mi>V</mi><mo>=</mo><msup><mi>a</mi><mn>3</mn></msup></math>
                 </td>
-                <td>
-                    <a href="calculator.html"><button onclick="calcCube()">rechnen</button></a>
+                <td class="calc-button">
+                    <a href="calculator.html"><button onclick="showCalcCube()">rechnen</button></a>
                 </td>
             </tr>
             <tr>
                 <td>Rechteck</td>
                 <td>
-                    <math xmlns = "http://www.w3.org/1998/Math/MathML"><mi>A</mi><mo>=</mo><mi>a</mi><mo>&middot</mo><mi>b</mi></math>
+                    <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>A</mi><mo>=</mo><mi>a</mi><mo>&middot</mo><mi>b</mi></math>
                 </td>
-                <td>
-                    <a href="calculator.html"><button onclick="calcRectangle()">rechnen</button></a>
+                <td class="calc-button">
+                    <a href="calculator.html"><button onclick="showCalcRectangle()">rechnen</button></a>
                 </td>
                 <td>Quader</td>
                 <td>
                     <math xmlns = "http://www.w3.org/1998/Math/MathML"><mi>V</mi><mo>=</mo><mi>a</mi><mo>&middot</mo><mi>b</mi><mo>&middot</mo><mi>c</mi></math>
                 </td>
-                <td>
-                    <a href="calculator.html"><button onclick="calcCuboid()">rechnen</button></a>
+                <td class="calc-button">
+                    <a href="calculator.html"><button onclick="showCalcCuboid()">rechnen</button></a>
                 </td>
             </tr>
             <tr>
@@ -171,32 +180,45 @@
                 <td>
                     <math xmlns = "http://www.w3.org/1998/Math/MathML"><mi>A</mi><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>&middot</mo><mi>a</mi><mo>&middot</mo><mi>h</mi></math>
                 </td>
-                <td>
-                    <a href="calculator.html"><button onclick="calcTriangle()">rechnen</button></a>
+                <td class="calc-button">
+                    <a href="calculator.html"><button onclick="showCalcTriangle()">rechnen</button></a>
                 </td>
                 <td>Pyramide</td>
                 <td>
                     <math xmlns = "http://www.w3.org/1998/Math/MathML"><mi>V</mi><mo>=</mo><mfrac><mn>1</mn><mn>3</mn></mfrac><mo>&middot</mo><mi>G</mi><mo>&middot</mo><mi>h</mi></math>
                 </td>
-                <td></td>
+                <td class="calc-button">
+                    <a href="calculator.html"><button onclick="showCalcPyramid()">rechnen</button></a>
+                </td>
             </tr>
             <tr>
                 <td>Kreis</td>
                 <td>
                     <math xmlns = "http://www.w3.org/1998/Math/MathML"><mi>A</mi><mo>=</mo><mi>π</mi><mo>&middot</mo><msup><mi>r</mi><mn>2</mn></msup></math>
                 </td>
-                <td>
-                    <a href="calculator.html"><button onclick="calcCircle()">rechnen</button></a>
+                <td class="calc-button">
+                    <a href="calculator.html"><button onclick="showCalcCircle()">rechnen</button></a>
                 </td>
                 <td>Kugel</td>
                 <td>
                     <math xmlns = "http://www.w3.org/1998/Math/MathML"><mi>V</mi><mo>=</mo><mfrac><mn>4</mn><mn>3</mn></mfrac><mo>&middot</mo><mi>π</mi><mo>&middot</mo><msup><mi>r</mi><mn>3</mn></msup></math>
                 </td>
-                <td>
-                    <a href="calculator.html"><button onclick="calcSphere()">rechnen</button></a>
+                <td class="calc-button">
+                    <a href="calculator.html"><button onclick="showCalcSphere()">rechnen</button></a>
                 </td>
             </tr>
         </table>
     </main>
+    <footer>
+        <div id="footer-exercise">
+            <p>Aufgabenstellung:</p><a id="moodle-link" href="https://elearning.dhbw-stuttgart.de/moodle/course/view.php?id=18217" target="_blank">Moodle der DHBW-Stuttgart</a>
+        </div>
+        <div id="footer-address">
+            <address>
+                <p>Geschrieben von:</p><a href="mailto:info@scheerlestudios.de">Josia Scheerle</a>
+            </address>
+        </div>
+        <p id="last-edited"><small>© <time datetime="2024-07-11">11.07.2024</time> - GeoCalculator</small></p>
+    </footer>
 </body>
 </html>
