@@ -101,17 +101,31 @@ nav ul {
     margin: 0;
 }
 nav li {
-    margin: 0 10px;
+    margin: 0 5px;
 }
 nav a {
     text-decoration: none;
     display: block;
-    padding: 10px;
+    padding: 5px;
+    border: 0 solid #e2e8f0;
+    border-radius: 1.5rem;
+    box-sizing: border-box;
+    color: #0d172a;
+    cursor: pointer;
+    padding: 1rem 1.6rem;
+    transition: all .4s cubic-bezier(.4, 0, .2, 1);
+    touch-action: manipulation;
 }
-nav a:hover, header a:hover {
+nav a:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+header a:hover {
     color: #333;
     background-color: rgba(0, 0, 0, 0.1);
     border-radius: 5px;
+
 }
 .dropdown-list li {
     width: 100%;
@@ -178,28 +192,62 @@ aside + a:link, aside + a:visited {
     text-decoration: none;
 }
 
-.button-wrapper {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    align-items: center;
-    margin: 10px 0;
-
-}
-.info-button {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    min-width: 100px;
+button {
+    width: 22%;
     margin-right: 5px;
     margin-bottom: 5px;
+    background-color: #fff;
+    border: none;
+    border-radius: 1.5rem;
+    box-sizing: border-box;
+    color: #0d172a;
+    cursor: pointer;
+    padding: 1rem 1.6rem;
+    transition: all .4s cubic-bezier(.4, 0, .2, 1);
+    box-shadow: 0px 1px 2px rgba(166, 175, 195, 0.25);
+    touch-action: manipulation;
+}
+button:hover {
+    background-color: #333;
+    color: #fff;
+}
+button:active {
+    background-color: #111;
+    color: #fff;
 }
 
-#moodle-link::before, #moodle-link::after {
-    content: " | ";
+
+.info h3 {
+    margin-top: 0;
 }
+
+.info {
+    padding: 5px;
+    z-index: 10;
+    width: auto;
+    margin-bottom: 2em;
+}
+
+.active-button {
+    background-color: #666;
+}
+.active-info {
+    display: block;
+    border: 2px solid #dd0016;
+    border-radius: 1.5rem;
+    padding: 10px;
+}
+
+#formula-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    margin-top:20px;
+}
+
 math + h5 {
     font-size: 0.9em;
     font-weight: normal;
@@ -215,6 +263,54 @@ input::-webkit-inner-spin-button {
 
 input[type="number"] {
     -moz-appearance: textfield;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    margin: 0;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    align-items:stretch;
+    justify-content: center;;
+
+}
+footer * {
+    color: white;
+}
+footer a:link, footer a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+table {
+    margin-top: 20px;
+    /* border: 1px solid #333; */
+    border-collapse: collapse;
+}
+th {
+    border: 1px solid #333;
+    border-bottom: 2px solid #333;
+    padding: 5px;
+}
+td {
+    border: 1px solid #333;
+    padding: 5px;
+}
+#table-seperator {
+    padding:50px;
+    border: none;
+}
+td a {
+    width: 100%;
+    display: block;
+}
+td button {
+    width: 100%;
+    min-width: 60px;
 }
 
 @media all and (min-width: 401px) {

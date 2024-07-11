@@ -34,50 +34,38 @@
         </ul>
     </nav>
     <main id="formulas-main">
+        <article>
+        </article>
         <article class="formulas">
             <h2 id="formulas-2d">2D</h2>
-            <div class="button-wrapper">
-                <button class="info-button" onclick="showInformation('square')"><img src="../assets/2D/square.png" alt="Quadrat"></button>
-                <button class="info-button" onclick="showInformation('rectangle')"><img src="../assets/2D/rectangle.png" alt="Rechteck"></button>
-                <button class="info-button" onclick="showInformation('triangle')"><img src="../assets/2D/triangle.png" alt="Dreick"></button>
-                <button class="info-button" onclick="showInformation('circle')"><img src="../assets/2D/circle.png" alt="Kreis"></button>
-                <button class="info-button" onclick="showInformation('rhombus')"><img src="../assets/2D/rhombus.png" alt="Raute"></button>            
-            </div>
-    
+            <button id="button-square" class="info-button" onclick="showInformation('square')"><img src="../assets/2D/square.png" alt="Quadrat"></button>
             <section class="info" id="info-square">
                 <h3>Quadrat</h3>
                 <h4>Flächenberechnung</h4>
-                <math xmlns = "http://www.w3.org/1998/Math/MathML">
-                    <mi>A</mi>
-                    <mo>=</mo>
-                    <mi>a</mi>
-                    <mo>&middot</mo>
-                    <mi>a</mi>
-                </math>
+                <math xmlns = "http://www.w3.org/1998/Math/MathML"><mi>A</mi><mo>=</mo><mi>a</mi><mo>&middot</mo><mi>a</mi></math>
                 <h5>Erklärung</h5>
                 <aside>Die <em>Fläche</em> eines Quadrats berechnet sich aus der Seitenlänge a, die mit sich selbst multipliziert wird.</aside>
                 <a href="calculator.html"><button onclick="calcSquare()">Zum Rechner</button></a>
             </section>
+            <button id="button-rectangle" class="info-button" onclick="showInformation('rectangle')"><img src="../assets/2D/rectangle.png" alt="Rechteck"></button>
             <section class="info" id="info-rectangle">
                 <h3>Rechteck</h3>
                 <h4>Flächenberechnung</h4>
-                <math xmlns = "http://www.w3.org/1998/Math/MathML">
-                    <mi>A</mi>
-                    <mo>=</mo>
-                    <mi>a</mi>
-                    <mo>&middot</mo>
-                    <mi>b</mi>
-                </math>
+                <math xmlns = "http://www.w3.org/1998/Math/MathML"><mi>A</mi><mo>=</mo><mi>a</mi><mo>&middot</mo><mi>b</mi></math>
                 <h5>Erklärung</h5>
                 <aside>Die <em>Fläche</em> eines Rechtecks berechnet sich aus der Länge a und der Breite b, die miteinander multipliziert werden.</aside>
+                <a href="calculator.html"><button onclick="calcRectangle()">Zum Rechner</button></a>
             </section>
+            <button id="button-triangle" class="info-button" onclick="showInformation('triangle')"><img src="../assets/2D/triangle.png" alt="Dreick"></button>
             <section class="info" id="info-triangle">
                 <h3>Dreieck</h3>
                 <h4>Flächenberechnung</h4>
                 <math xmlns = "http://www.w3.org/1998/Math/MathML"><mi>A</mi><mo>=</mo><mn>0,5</mn><mo>&middot</mo><mi>a</mi><mo>&middot</mo><mi>h</mi></math>
                 <h5>Erklärung</h5>
                 <aside>Die <em>Fläche</em> eines Dreiecks berechnet sich aus der Grundseite a und der Höhe h, die miteinander multipliziert und durch 2 geteilt werden.</aside>
+                <a href="calculator.html"><button onclick="calcTriangle()">Zum Rechner</button></a>
             </section>
+            <button id="button-circle" class="info-button" onclick="showInformation('circle')"><img src="../assets/2D/circle.png" alt="Kreis"></button>
             <section class="info" id="info-circle">
                 <h3>Kreis</h3>
                 <h4>Flächenberechnung</h4>
@@ -85,69 +73,130 @@
                 <math xmlns = "http://www.w3.org/1998/Math/MathML"><mi>A</mi><mo>=</mo><mi>π</mi><mo>&middot</mo><msup><mi>r</mi><mn>2</mn></msup></math> 
                 <h5>Erklärung</h5>
                 <aside>Die <em>Fläche</em> eines Kreises berechnet sich aus dem Radius r, der quadriert und mit π multipliziert wird.</aside>
-            </section>
-            <section class="info" id="info-rhombus">
-                <h3>Raute</h3>
-                <h4></h4>
+                <a href="calculator.html"><button onclick="calcCircle()">Zum Rechner</button></a>
             </section>
         </article>
         <hr>
         <article class="formulas">
 
             <h2 id="formulas-3d">3D</h2>
-            <div class="button-wrapper">
-                <button class="info-button" onclick="showInformation('cube')"><img src="../assets/3D/cube.png" alt="Würfel"></button>
-                <button class="info-button" onclick="showInformation('cuboid')"><img src="../assets/3D/cuboid.png" alt="Quader"></button>
-                <button class="info-button" onclick="showInformation('pyramid')"><img src="../assets/3D/pyramid.png" alt="Pyramide"></button>
-                <button class="info-button" onclick="showInformation('sphere')"><img src="../assets/3D/sphere.png" alt="Kugel"></button>
-            </div>
-        
+            <button id="button-cube" class="info-button" onclick="showInformation('cube')"><img src="../assets/3D/cube.png" alt="Würfel"></button>
             <section class="info" id="info-cube">
                 <h3>Würfel</h3>
                 <h4>Volumenberechnung</h4>
                 <math xmlns = "http://www.w3.org/1998/Math/MathML"><mi>V</mi><mo>=</mo><msup><mi>a</mi><mn>3</mn></msup></math>
+                <h5>Erklärung</h5>
+                <aside>Das <em>Volumen</em> eines Würfels berechnet sich aus der Kantenlänge a, die mit sich selbst und noch einmal mit sich selbst multipliziert wird.</aside>
+                <a href="calculator.html"><button onclick="calcCube()">Zum Rechner</button></a>
             </section>
+            <button id="button-cuboid" class="info-button" onclick="showInformation('cuboid')"><img src="../assets/3D/cuboid.png" alt="Quader"></button>
             <section class="info" id="info-cuboid">
                 <h3>Quader</h3>
                 <h4>Volumenberechnung</h4>
                 <math xmlns = "http://www.w3.org/1998/Math/MathML"><mi>V</mi><mo>=</mo><mi>a</mi><mo>&middot</mo><mi>b</mi><mo>&middot</mo><mi>c</mi></math>
+                <h5>Erklärung</h5>
+                <aside>Das <em>Volumen</em> eines Quaders berechnet sich aus den drei Seitenlängen a, b und c, die miteinander multipliziert werden.</aside>
+                <a href="calculator.html"><button onclick="calcCuboid()">Zum Rechner</button></a>
             </section>
+            <button id="button-pyramid" class="info-button" onclick="showInformation('pyramid')"><img src="../assets/3D/pyramid.png" alt="Pyramide"></button>
             <section class="info" id="info-pyramid">
                 <h3>Pyramide</h3>
                 <h4>Volumenberechnung</h4>
-                <math xmlns = "http://www.w3.org/1998/Math/MathML">
-                    <mi>V</mi>
-                    <mo>=</mo>
-                    <mfrac>
-                        <mn>1</mn>
-                        <mn>3</mn>
-                    </mfrac>
-                    <mo>&middot</mo>
-                    <mi>G</mi>
-                    <mo>&middot</mo>
-                    <mi>h</mi>
-                </math>
+                <math xmlns = "http://www.w3.org/1998/Math/MathML"><mi>V</mi><mo>=</mo><mfrac><mn>1</mn><mn>3</mn></mfrac><mo>&middot</mo><mi>G</mi><mo>&middot</mo><mi>h</mi></math>
+                <h5>Erklärung</h5>
+                <aside>Das <em>Volumen</em> einer Pyramide berechnet sich aus der Grundfläche G und der Höhe h, die miteinander multipliziert und durch 3 geteilt werden.</aside>
             </section>
+            <button id="button-sphere" class="info-button" onclick="showInformation('sphere')"><img src="../assets/3D/sphere.png" alt="Kugel"></button>
             <section class="info" id="info-sphere">
                 <h3>Kugel</h3>
                 <h4>Volumenberechnung</h4>
-                <math xmlns = "http://www.w3.org/1998/Math/MathML">
-                    <mi>V</mi>
-                    <mo>=</mo>
-                    <mfrac>
-                        <mn>4</mn>
-                        <mn>3</mn>
-                    </mfrac>
-                    <mo>&middot</mo>
-                    <mi>π</mi>
-                    <mo>&middot</mo>
-                    <msup>
-                        <mi>r</mi>
-                        <mn>3</mn>
-                    </msup>
-                </math>
+                <math xmlns = "http://www.w3.org/1998/Math/MathML"><mi>V</mi><mo>=</mo><mfrac><mn>4</mn><mn>3</mn></mfrac><mo>&middot</mo><mi>π</mi><mo>&middot</mo><msup><mi>r</mi><mn>3</mn></msup></math>
+                <h5>Erklärung</h5>
+                <aside>Das <em>Volumen</em> einer Kugel berechnet sich aus dem Radius r, der mit sich selbst und noch einmal mit sich selbst multipliziert wird. Das Ergebnis wird mit 4/3 und π multipliziert.</aside>
+                <a href="calculator.html"><button onclick="calcSphere()">Zum Rechner</button></a>
             </section>
         </article>
+        <div id="formula-buttons" class="button-wrapper">
+            <button onclick="hideBorders()">Highlights zurücksetzen</button>
+        </div>
+        <table>
+            <caption>Übersicht der Formeln</caption>
+            <tr>
+                <th colspan="3">2D</th>
+                <th id="table-seperator" rowspan="6"></th>
+                <th colspan="3">3D</th>
+            </tr>
+            <tr>
+                <th>Figur</th>
+                <th>Formel</th>
+                <th></th>
+                <th>Figur</th>
+                <th>Formel</th>
+                <th></th>
+            </tr>
+            <tr>
+                <td>Quadrat</td>
+                <td>
+                    <math xmlns = "http://www.w3.org/1998/Math/MathML"><mi>A</mi><mo>=</mo><mi>a</mi><mo>&middot</mo><mi>a</mi></math>
+                </td>
+                <td>
+                    <a href="calculator.html"><button onclick="calcSquare()">rechnen</button></a>
+                </td>
+                <td>Würfel</td>
+                <td>
+                    <math xmlns = "http://www.w3.org/1998/Math/MathML"><mi>V</mi><mo>=</mo><msup><mi>a</mi><mn>3</mn></msup></math>
+                </td>
+                <td>
+                    <a href="calculator.html"><button onclick="calcCube()">rechnen</button></a>
+                </td>
+            </tr>
+            <tr>
+                <td>Rechteck</td>
+                <td>
+                    <math xmlns = "http://www.w3.org/1998/Math/MathML"><mi>A</mi><mo>=</mo><mi>a</mi><mo>&middot</mo><mi>b</mi></math>
+                </td>
+                <td>
+                    <a href="calculator.html"><button onclick="calcRectangle()">rechnen</button></a>
+                </td>
+                <td>Quader</td>
+                <td>
+                    <math xmlns = "http://www.w3.org/1998/Math/MathML"><mi>V</mi><mo>=</mo><mi>a</mi><mo>&middot</mo><mi>b</mi><mo>&middot</mo><mi>c</mi></math>
+                </td>
+                <td>
+                    <a href="calculator.html"><button onclick="calcCuboid()">rechnen</button></a>
+                </td>
+            </tr>
+            <tr>
+                <td>Dreieck</td>
+                <td>
+                    <math xmlns = "http://www.w3.org/1998/Math/MathML"><mi>A</mi><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>&middot</mo><mi>a</mi><mo>&middot</mo><mi>h</mi></math>
+                </td>
+                <td>
+                    <a href="calculator.html"><button onclick="calcTriangle()">rechnen</button></a>
+                </td>
+                <td>Pyramide</td>
+                <td>
+                    <math xmlns = "http://www.w3.org/1998/Math/MathML"><mi>V</mi><mo>=</mo><mfrac><mn>1</mn><mn>3</mn></mfrac><mo>&middot</mo><mi>G</mi><mo>&middot</mo><mi>h</mi></math>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Kreis</td>
+                <td>
+                    <math xmlns = "http://www.w3.org/1998/Math/MathML"><mi>A</mi><mo>=</mo><mi>π</mi><mo>&middot</mo><msup><mi>r</mi><mn>2</mn></msup></math>
+                </td>
+                <td>
+                    <a href="calculator.html"><button onclick="calcCircle()">rechnen</button></a>
+                </td>
+                <td>Kugel</td>
+                <td>
+                    <math xmlns = "http://www.w3.org/1998/Math/MathML"><mi>V</mi><mo>=</mo><mfrac><mn>4</mn><mn>3</mn></mfrac><mo>&middot</mo><mi>π</mi><mo>&middot</mo><msup><mi>r</mi><mn>3</mn></msup></math>
+                </td>
+                <td>
+                    <a href="calculator.html"><button onclick="calcSphere()">rechnen</button></a>
+                </td>
+            </tr>
+        </table>
     </main>
 </body>
 </html>
