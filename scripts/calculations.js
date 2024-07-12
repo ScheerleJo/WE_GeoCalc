@@ -107,12 +107,8 @@ function calculate() {
             } else result = (1/3) * (0.5 * a * b) * c;
             break;
     }
-    if(isNormalCalculation) {
-        result = Math.abs(result);
-        if(shape == 'square' || shape == 'rectangle' || shape == 'triangle' || shape =='circle') document.getElementById('label-result').innerText = 'Ergebnnis A';
-        else document.getElementById('label-result').innerText = 'Ergebnis V';
-        document.getElementById('result').value = result;
-    } else {
+    if(isNormalCalculation) document.getElementById('result').value = Math.abs(result);
+    else {
         document.getElementById('input-a').value = a;
         document.getElementById('input-b').value = b;
         document.getElementById('input-c').value = c; 
@@ -124,28 +120,33 @@ function showCalcSquare() {
     showSpecificInputs(true);
     document.getElementById('label-a').innerText = 'Seitenlänge a';
     document.getElementById('formula-text').innerHTML = '<math xmlns = "http://www.w3.org/1998/Math/MathML"><mi>A</mi><mo>=</mo><mi>a</mi><mo>&middot</mo><mi>a</mi></math>';
+    document.getElementById('label-result').innerText = 'Ergebnnis A';
 }
 function showCalcRectangle() {
     showSpecificInputs(true, true);
     document.getElementById('label-a').innerText = 'Seitenlänge a';
     document.getElementById('label-b').innerText = 'Seitenlänge b';
     document.getElementById('formula-text').innerHTML = '<math xmlns = "http://www.w3.org/1998/Math/MathML"><mi>A</mi><mo>=</mo><mi>a</mi><mo>&middot</mo><mi>b</mi></math>';
+    document.getElementById('label-result').innerText = 'Ergebnnis A';
 }
 function showCalcTriangle() {
     showSpecificInputs(true, true);
     document.getElementById('label-a').innerText = 'Grundseite a';
     document.getElementById('label-b').innerText = 'Höhe h';
     document.getElementById('formula-text').innerHTML = '<math xmlns = "http://www.w3.org/1998/Math/MathML"><mi>A</mi><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>&middot</mo><mi>a</mi><mo>&middot</mo><mi>h</mi></math>';
+    document.getElementById('label-result').innerText = 'Ergebnnis A';
 }
 function showCalcCircle() {
     showSpecificInputs(true);
     document.getElementById('label-a').innerText = 'Radius r';
     document.getElementById('formula-text').innerHTML = '<math xmlns = "http://www.w3.org/1998/Math/MathML"><mi>A</mi><mo>=</mo><mi>π</mi><mo>&middot</mo><msup><mi>r</mi><mn>2</mn></msup></math>';
+    document.getElementById('label-result').innerText = 'Ergebnnis A';
 }
 function showCalcCube() {
     showSpecificInputs(true);
     document.getElementById('label-a').innerText = 'Kantenlänge a';
     document.getElementById('formula-text').innerHTML = '<math xmlns = "http://www.w3.org/1998/Math/MathML"><mi>V</mi><mo>=</mo><msup><mi>a</mi><mn>3</mn></msup></math>';
+    document.getElementById('label-result').innerText = 'Ergebnnis V';
 }
 function showCalcCuboid() {
     showSpecificInputs(true, true, true);
@@ -153,6 +154,7 @@ function showCalcCuboid() {
     document.getElementById('label-b').innerText = 'Kantenlänge b';
     document.getElementById('label-c').innerText = 'Kantenlänge c';
     document.getElementById('formula-text').innerHTML = '<math xmlns = "http://www.w3.org/1998/Math/MathML"><mi>V</mi><mo>=</mo><mi>a</mi><mo>&middot</mo><mi>b</mi><mo>&middot</mo><mi>c</mi></math>';
+    document.getElementById('label-result').innerText = 'Ergebnnis V';
 }
 function showCalcSphere() {
     showSpecificInputs(true);
@@ -165,6 +167,7 @@ function showCalcPyramid() {
     document.getElementById('label-b').innerText = 'Grundseite b';
     document.getElementById('label-c').innerText = 'Höhe h';
     document.getElementById('formula-text').innerHTML = '<math xmlns = "http://www.w3.org/1998/Math/MathML"><mi>V</mi><mo>=</mo><mfrac><mn>1</mn><mn>3</mn></mfrac><mo>&middot</mo><mi>a</mi><mo>&middot</mo><mi>b</mi><mo>&middot</mo><mi>h</mi></math>';
+    document.getElementById('label-result').innerText = 'Ergebnnis V';
 }
 
 function showCalcTetraeder() {
@@ -173,6 +176,7 @@ function showCalcTetraeder() {
     document.getElementById('label-b').innerText = '"Höhe" Grunfläche b';
     document.getElementById('label-c').innerText = 'Höhe h';
     document.getElementById('formula-text').innerHTML = '<math xmlns = "http://www.w3.org/1998/Math/MathML"><mi>V</mi><mo>=</mo><mfrac><mn>1</mn><mn>3</mn></mfrac><mo>&middot</mo><mrow><mo>(</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>&middot</mo><mi>a</mi><mo>&middot</mo><mi>b</mi><mo>)</mo></mrow><mo>&middot</mo><mi>h</mi></math>';
+    document.getElementById('label-result').innerText = 'Ergebnnis V';
 }
 
 function showSpecificInputs(input1 = false,input2 = false,input3 = false) {
