@@ -3,12 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="assets/2D/shapes.png" type="image/x-icon">
+    <link rel="icon" href="../assets/2D/shapes.png" type="image/x-icon">
     <link rel="stylesheet" href="../styles.css">
     <script src="../scripts/showInformation.js"></script>
     <script src="../scripts/calculations.js"></script>
     <title>Rechner - Geo Calculator</title>
-    <link rel="icon" href="../assets/2D/shapes.png" type="image/x-icon">
 </head>
 <body onload="onCalcBodyLoad()">
     <header>
@@ -38,8 +37,7 @@
     </nav>
     <h2 id="calc-header">Geometrische Berechnungen</h2>
     <main id="calculator-main">
-        <div id="input-container-spinner">
-            <label for="geometries">Figuren:</label>
+            <label for="geometries" id="geo-options-label">Figuren:</label>
             <select name="geometries" id="geo-options">
                 <option value="square">Quadrat</option>
                 <option value="rectangle">Rechteck</option>
@@ -48,19 +46,19 @@
                 <option value="cube">Würfel</option>
                 <option value="cuboid">Quader</option>
                 <option value="pyramid">Pyramide</option>
+                <option value="tetraeder">Dreiecks-Pyramide</option>
                 <option value="sphere">Kugel</option>
             </select>
-        </div>
         <h3>Ausgewählte Formel:</h3>
         <p id="formula-text">Formel: A = a * b</p>
 
-        <div id="input-container-a"><label id="label-a" for="a">Input 1</label><input type="number" name='a' id="input-a"></div>
-        <div id="input-container-b"><label id="label-b" for="b">Input 2</label><input type="number" name='b' id="input-b"></div>
-        <div id="input-container-c"><label id="label-c" for="c">Input 3</label><input type="number" name='c' id="input-c"></div>
+        <label id="label-a" for="a">Input 1</label><input type="number" name='a' id="input-a">
+        <label id="label-b" for="b">Input 2</label><input type="number" name='b' id="input-b">
+        <label id="label-c" for="c">Input 3</label><input type="number" name='c' id="input-c">
 
-        <div id="input-container-result"><label id="label-result" for="result">Ergebnis A</label><input name="result" type="text" id="result" placeholder="Ergebnis"></div>    
+        <label id="label-result" for="result">Ergebnis A</label><input name="result" type="text" id="result" placeholder="Ergebnis">    
     
-        <button onclick="calculate()">Berechnen</button>
+        <button id="button-calculate" onclick="calculate()">Berechnen</button>
     
     </main>
 
@@ -73,7 +71,7 @@
                 <p>Geschrieben von:</p><a href="mailto:info@scheerlestudios.de">Josia Scheerle</a>
             </address>
         </div>
-        <p id="last-edited"><small>© <time datetime="2024-07-11">11.07.2024</time> - GeoCalculator</small></p>
+        <p id="last-edited"><small>© <time datetime="2024-07-12">12.07.2024</time> - GeoCalculator</small></p>
     </footer>
 </body>
 </html>

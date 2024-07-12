@@ -4,7 +4,7 @@
 
 - [x] Übung 6  (S. 72) letzte 4 Selektoren (E + N)
 - [x] Übung 8  (S. 81) Grid Layouting
-  - [ ] Rechner als Grid Layouten und vollends Testen
+  - [x] Rechner als Grid Layouten und vollends Testen
 - [x] Übung 9  (S. 87) 3 von 8 ELEGANCE-Pattern
 
   - [x] Empathy

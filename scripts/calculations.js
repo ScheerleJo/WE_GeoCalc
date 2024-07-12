@@ -22,9 +22,6 @@ function showForm() {
 }
 
 
-
-
-
 function calculate() {
 
     const shape = document.getElementById('geo-options').value;
@@ -39,6 +36,11 @@ function calculate() {
         console.error('Error: ' + error);
         return;
     }
+    if(a < 0 || b < 0 || c < 0) {
+        alert('Bitte geben sie gültige Werte für die Berechnung ein');
+        return;
+    }
+
     // Calculate normally if all values are given
     switch(shape) {
         case 'rectangle':
@@ -130,7 +132,7 @@ function showCalcRectangle() {
     document.getElementById('formula-text').innerHTML = '<math xmlns = "http://www.w3.org/1998/Math/MathML"><mi>A</mi><mo>=</mo><mi>a</mi><mo>&middot</mo><mi>b</mi></math>';
 }
 function showCalcTriangle() {
-    showSpecificInputs(true);
+    showSpecificInputs(true, true);
     document.getElementById('label-a').innerText = 'Grundseite a';
     document.getElementById('label-b').innerText = 'Höhe h';
     document.getElementById('formula-text').innerHTML = '<math xmlns = "http://www.w3.org/1998/Math/MathML"><mi>A</mi><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>&middot</mo><mi>a</mi><mo>&middot</mo><mi>h</mi></math>';
@@ -174,17 +176,21 @@ function showCalcTetraeder() {
 }
 
 function showSpecificInputs(input1 = false,input2 = false,input3 = false) {
-    let a = document.getElementById('input-container-a');
-    let b = document.getElementById('input-container-b');
-    let c = document.getElementById('input-container-c');
+    let a = document.getElementById('input-a');
+    let b = document.getElementById('input-b');
+    let c = document.getElementById('input-c');
     a.style.display = input1? 'block' : 'none';
+    a.value = input1? 0: '';
     b.style.display = input2? 'block' : 'none';
+    b.value = input2? 0: '';
     c.style.display = input3? 'block' : 'none';
+    c.value = input3? 0: '';
+    
+    document.getElementById('label-a').style.display = input1? 'block' : 'none';
+    document.getElementById('label-b').style.display = input2? 'block' : 'none';
+    document.getElementById('label-c').style.display = input3? 'block' : 'none';    
 
-    document.getElementById('input-a').value = input1? 0: '';
-    document.getElementById('input-b').value = input2? 0: '';
-    document.getElementById('input-c').value = input3? 0: '';
-    document.getElementById('result').value = 0;
+    document.getElementById('result').value = '';
 }
 
 function xor(a = undefined, b = undefined, c = undefined) {
@@ -193,5 +199,5 @@ function xor(a = undefined, b = undefined, c = undefined) {
     return xor;
 }
 function isEmpty(value) {
-    return value === 0 || value.trim() === '';
+    return value === 0 || value === '';
 }
