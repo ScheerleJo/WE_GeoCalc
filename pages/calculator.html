@@ -15,6 +15,7 @@
         <h1>Rechner</h1>
     </header>
     <nav>
+        <!-- DropDownMenu for smaller pages -->
         <div class="menu">
             <a id="menu-list"><img src="../assets/bars-regular.svg" class="fa-big" alt=""></a>
             <ol class="dropdown-list" >
@@ -22,6 +23,7 @@
                 <li><a href="./formulas.html">Formelsammlung</a></li>
             </ol>
         </div>
+        <!-- Navbar for regular Desktop-Windows -->
         <ul>
             <li><a href="../index.html">Startseite</a></li>
             <li>
@@ -35,19 +37,20 @@
             <li><a>Rechner</a></li>
         </ul>
     </nav>
+    <!-- Calculator-View for different Inputs -->
     <h2 id="calc-header">Geometrische Berechnungen</h2>
     <main id="calculator-main">
             <label for="geometries" id="geo-options-label">Figuren:</label>
             <select name="geometries" id="geo-options">
-                <option value="square">Quadrat</option>
-                <option value="rectangle">Rechteck</option>
-                <option value="triangle">Dreieck</option>
-                <option value="circle">Kreis</option>
-                <option value="cube">Würfel</option>
-                <option value="cuboid">Quader</option>
-                <option value="pyramid">Pyramide</option>
-                <option value="tetraeder">Dreiecks-Pyramide</option>
-                <option value="sphere">Kugel</option>
+                <option id="geo-value-square" value="square">Quadrat</option>
+                <option id="geo-value-rect" value="rectangle">Rechteck</option>
+                <option id="geo-value-triangle" value="triangle">Dreieck</option>
+                <option id="geo-value-circle" value="circle">Kreis</option>
+                <option id="geo-value-cube" value="cube">Würfel</option>
+                <option id="geo-value-cuboid" value="cuboid">Quader</option>
+                <option id="geo-value-pyramid" value="pyramid">Pyramide</option>
+                <option id="geo-value-tetraeder" value="tetraeder">Dreiecks-Pyramide</option>
+                <option id="geo-value-sphere" value="sphere">Kugel</option>
             </select>
         <h3>Ausgewählte Formel:</h3>
         <p id="formula-text">Formel: A = a * b</p>
