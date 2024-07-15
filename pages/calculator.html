@@ -6,7 +6,7 @@
     <link rel="icon" href="../assets/2D/shapes.png" type="image/x-icon">
     <link rel="stylesheet" href="../styles.css">
     <script src="../scripts/showInformation.js"></script>
-    <script src="../scripts/calculations.js"></script>
+    <script src="../scripts/calculations.js" defer></script>
     <title>Rechner - Geo Calculator</title>
 </head>
 <body onload="onCalcBodyLoad()">
@@ -17,7 +17,7 @@
     <nav>
         <!-- DropDownMenu for smaller pages -->
         <div class="menu">
-            <a id="menu-list"><img src="../assets/bars-regular.svg" class="fa-big" alt=""></a>
+            <a id="menu-list"><img src="../assets/icons/bars-regular.svg" class="fa-big" alt=""></a>
             <ol class="dropdown-list" >
                 <li><a href="../index.html">Startseite</a></li>
                 <li><a href="./formulas.html">Formelsammlung</a></li>
@@ -29,8 +29,8 @@
             <li>
                 <a>Formelsammlung</a>
                 <ol class="dropdown-list">
-                    <li><a href="./formulas.html#formulas-2D"><img src="../assets/square-regular.svg" class="fa" alt=""></img>2D</a></li>
-                    <li><a href="./formulas.html#formulas-3D"><img src="../assets/cube-regular.svg" class="fa" alt=""></img>3D</a></li>
+                    <li><a href="./formulas.html#formulas-2D"><img src="../assets/icons/square-regular.svg" class="fa" alt=""></img>2D</a></li>
+                    <li><a href="./formulas.html#formulas-3D"><img src="../assets/icons/cube-regular.svg" class="fa" alt=""></img>3D</a></li>
                     <li><a href="./formulas.html#formulas-overview">Übersicht</a></li>
                 </ol>
             </li>
@@ -40,7 +40,7 @@
     <!-- Calculator-View for different Inputs -->
     <h2 id="calc-header">Geometrische Berechnungen</h2>
     <main id="calculator-main">
-            <label for="geometries" id="geo-options-label">Figuren:</label>
+            <label for="geo-options" id="geo-options-label">Figuren:</label>
             <select name="geometries" id="geo-options">
                 <option id="geo-value-square" value="square">Quadrat</option>
                 <option id="geo-value-rect" value="rectangle">Rechteck</option>
@@ -55,13 +55,15 @@
         <h3>Ausgewählte Formel:</h3>
         <p id="formula-text">Formel: A = a * b</p>
 
-        <label id="label-a" for="a">Input 1</label><input type="number" name='a' id="input-a">
-        <label id="label-b" for="b">Input 2</label><input type="number" name='b' id="input-b">
-        <label id="label-c" for="c">Input 3</label><input type="number" name='c' id="input-c">
+        <label id="label-a" for="input-a">Input 1</label><input type="number" name='a' id="input-a">
+        <label id="label-b" for="input-b">Input 2</label><input type="number" name='b' id="input-b">
+        <label id="label-c" for="input-c">Input 3</label><input type="number" name='c' id="input-c">
 
         <label id="label-result" for="result">Ergebnis A</label><input name="result" type="text" id="result" placeholder="Ergebnis">    
     
         <button id="button-calculate" onclick="calculate()">Berechnen</button>
+
+        <img id="img-geometry" src="" alt="">
     
     </main>
 
@@ -71,10 +73,16 @@
         </div>
         <div id="footer-address">
             <address>
-                <p>Geschrieben von:</p><a href="mailto:info@scheerlestudios.de">Josia Scheerle</a>
+                <p>Website von:</p>
+                <div class="follow-wrap">
+                    <a href="https://www.instagram.com/scheerlestudios/" target="_blank"><div class="img-insta"></div></a>
+                    <a href="https://twitter.com/scheerlej" target="_blank"><div class="img-x"></div></a>
+                    <a href="https://github.com/ScheerleJo" target="_blank"><div class="img-github"></div></a>
+                    <a href="mailto:info@scheerlestudios.de" target="_blank"><div class="img-mail"></div></a>
+                </div>
             </address>
         </div>
-        <p id="last-edited"><small>© <time datetime="2024-07-12">12.07.2024</time> - GeoCalculator</small></p>
+        <p id="last-edited"><small>© <time datetime="2024-07-15">15.07.2024</time> - GeoCalculator</small></p>
     </footer>
 </body>
 </html>

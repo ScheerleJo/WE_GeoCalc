@@ -152,6 +152,7 @@ function showCalcSquare() {
     document.getElementById('label-a').innerText = 'Seitenlänge a';
     document.getElementById('formula-text').innerHTML = '<math xmlns = "http://www.w3.org/1998/Math/MathML"><mi>A</mi><mo>=</mo><mi>a</mi><mo>&middot</mo><mi>a</mi></math>';
     document.getElementById('label-result').innerText = 'Ergebnnis A';
+    document.getElementById('img-geometry').setAttribute('src', '../assets/2D/square.png');
 }
 
 /**
@@ -163,17 +164,19 @@ function showCalcRectangle() {
     document.getElementById('label-b').innerText = 'Seitenlänge b';
     document.getElementById('formula-text').innerHTML = '<math xmlns = "http://www.w3.org/1998/Math/MathML"><mi>A</mi><mo>=</mo><mi>a</mi><mo>&middot</mo><mi>b</mi></math>';
     document.getElementById('label-result').innerText = 'Ergebnnis A';
+    document.getElementById('img-geometry').setAttribute('src', '../assets/2D/rectangle.png');
 }
 
 /**
  * Shows the Input-Boxes to calculate the area of a triangle
- */
+*/
 function showCalcTriangle() {
     showSpecificInputs(true, true);
     document.getElementById('label-a').innerText = 'Grundseite a';
     document.getElementById('label-b').innerText = 'Höhe h';
     document.getElementById('formula-text').innerHTML = '<math xmlns = "http://www.w3.org/1998/Math/MathML"><mi>A</mi><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>&middot</mo><mi>a</mi><mo>&middot</mo><mi>h</mi></math>';
     document.getElementById('label-result').innerText = 'Ergebnnis A';
+    document.getElementById('img-geometry').setAttribute('src', '../assets/2D/triangle.png');
 }
 
 /**
@@ -184,21 +187,23 @@ function showCalcCircle() {
     document.getElementById('label-a').innerText = 'Radius r';
     document.getElementById('formula-text').innerHTML = '<math xmlns = "http://www.w3.org/1998/Math/MathML"><mi>A</mi><mo>=</mo><mi>π</mi><mo>&middot</mo><msup><mi>r</mi><mn>2</mn></msup></math>';
     document.getElementById('label-result').innerText = 'Ergebnnis A';
+    document.getElementById('img-geometry').setAttribute('src', '../assets/2D/circle.png');
 }
 
 /**
  * Shows the Input-Boxes to calculate the volume of a cube
- */
+*/
 function showCalcCube() {
     showSpecificInputs(true);
     document.getElementById('label-a').innerText = 'Kantenlänge a';
     document.getElementById('formula-text').innerHTML = '<math xmlns = "http://www.w3.org/1998/Math/MathML"><mi>V</mi><mo>=</mo><msup><mi>a</mi><mn>3</mn></msup></math>';
     document.getElementById('label-result').innerText = 'Ergebnnis V';
+    document.getElementById('img-geometry').setAttribute('src', '../assets/3D/cube.png');
 }
 
 /**
  * Shows the Input-Boxes to calculate the volume of a cuboid
- */
+*/
 function showCalcCuboid() {
     showSpecificInputs(true, true, true);
     document.getElementById('label-a').innerText = 'Kantenlänge a';
@@ -206,20 +211,22 @@ function showCalcCuboid() {
     document.getElementById('label-c').innerText = 'Kantenlänge c';
     document.getElementById('formula-text').innerHTML = '<math xmlns = "http://www.w3.org/1998/Math/MathML"><mi>V</mi><mo>=</mo><mi>a</mi><mo>&middot</mo><mi>b</mi><mo>&middot</mo><mi>c</mi></math>';
     document.getElementById('label-result').innerText = 'Ergebnnis V';
+    document.getElementById('img-geometry').setAttribute('src', '../assets/3D/cuboid.png');
 }
 
 /**
  * Shows the Input-Boxes to calculate the volume of a sphere
- */
+*/
 function showCalcSphere() {
     showSpecificInputs(true);
     document.getElementById('label-a').innerText = 'Radius r';
     document.getElementById('formula-text').innerHTML = '<math xmlns = "http://www.w3.org/1998/Math/MathML"><mi>V</mi><mo>=</mo><mfrac><mn>4</mn><mn>3</mn></mfrac><mo>&middot</mo><mi>π</mi><mo>&middot</mo><msup><mi>r</mi><mn>3</mn></msup></math>';
+    document.getElementById('img-geometry').setAttribute('src', '../assets/3D/sphere.png');
 }
 
 /**
  * Shows the Input-Boxes to calculate the volume of a pyramid
- */
+*/
 function showCalcPyramid() {
     showSpecificInputs(true, true, true);
     document.getElementById('label-a').innerText = 'Grundseite a';
@@ -227,10 +234,11 @@ function showCalcPyramid() {
     document.getElementById('label-c').innerText = 'Höhe h';
     document.getElementById('formula-text').innerHTML = '<math xmlns = "http://www.w3.org/1998/Math/MathML"><mi>V</mi><mo>=</mo><mfrac><mn>1</mn><mn>3</mn></mfrac><mo>&middot</mo><mi>a</mi><mo>&middot</mo><mi>b</mi><mo>&middot</mo><mi>h</mi></math>';
     document.getElementById('label-result').innerText = 'Ergebnnis V';
+    document.getElementById('img-geometry').setAttribute('src', '../assets/3D/pyramid.png');
 }
 /**
  * Shows the Input-Boxes to calculate the volume of a tetraeder
- */
+*/
 function showCalcTetraeder() {
     showSpecificInputs(true, true, true);
     document.getElementById('label-a').innerText = 'Kante Grundfläche a';
@@ -238,6 +246,7 @@ function showCalcTetraeder() {
     document.getElementById('label-c').innerText = 'Höhe h';
     document.getElementById('formula-text').innerHTML = '<math xmlns = "http://www.w3.org/1998/Math/MathML"><mi>V</mi><mo>=</mo><mfrac><mn>1</mn><mn>3</mn></mfrac><mo>&middot</mo><mrow><mo>(</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>&middot</mo><mi>a</mi><mo>&middot</mo><mi>b</mi><mo>)</mo></mrow><mo>&middot</mo><mi>h</mi></math>';
     document.getElementById('label-result').innerText = 'Ergebnnis V';
+    document.getElementById('img-geometry').setAttribute('src', '../assets/3D/tetraeder.png');
 }
 
 /**

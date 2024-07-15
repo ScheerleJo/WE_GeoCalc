@@ -217,12 +217,12 @@ nav ul li:hover ol {
 footer {
     background-color: #333;
     color: white;
-    padding: 10px;
     margin: 0;
     width: 100%;
     position: fixed;
     bottom: 0;
     display: grid;
+    font-size: 0.8em;
     grid-template-columns: 50% 50%;
     grid-template-rows: 100%;
 }
@@ -242,9 +242,13 @@ footer div p {
 #footer-exercise {
     grid-column: 1 / 2;
     grid-row: 1 / 2;
+    display: flex;
+    flex-direction: row ;
+    align-items: center;
+    justify-content: center;
 }
 footer a {
-    padding: 10px;
+    padding: 5px;
     border-radius: 1.5rem;
 }
 #footer-exercise a:hover {
@@ -262,6 +266,58 @@ footer a {
 }
 #last-edited *{
     color: rgb(118, 118, 118);
+}
+
+.follow-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;    
+}
+address {
+    font-style: normal;
+    display: flex;
+    flex-direction: row ;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+}
+.follow-wrap a {
+    margin: 0;
+    padding: 5px;
+
+}
+.follow-wrap a:hover {
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+.follow-wrap img, .follow-wrap div {
+    width: 30px;
+    height: 30px;
+}
+.img-insta {
+    background: #f09433; 
+    background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+
+    -webkit-mask: url(../assets/icons/square-instagram.svg) no-repeat center;
+    mask: url(../assets/icons/square-instagram.svg) no-repeat center;
+}
+.img-mail {
+    background: #0078D4; 
+    -webkit-mask: url(../assets/icons/square-envelope-solid.svg) no-repeat center;
+    mask: url(../assets/icons/square-envelope-solid.svg) no-repeat center;
+}
+.img-x {
+    background: #000; 
+    -webkit-mask: url(../assets/icons/square-x-twitter.svg) no-repeat center;
+    mask: url(../assets/icons/square-x-twitter.svg) no-repeat center;
+}
+.img-github {
+    background:#fafbfc;
+    -webkit-mask: url(../assets/icons/square-github.svg) no-repeat center;
+    mask: url(../assets/icons/square-github.svg) no-repeat center;
 }
 /* #endregion FOOTER */
 
@@ -347,6 +403,12 @@ iframe  {
     grid-column: 2/3;
     grid-row: 6/7;
     width: 100%;
+}
+#img-geometry {
+    grid-row: 3/6;
+    grid-column: 4/5;
+    height: 85%;
+    margin: 0 auto;
 }
 /* #endregion GRID-Calculator*/
 /* #region FORMULAS */

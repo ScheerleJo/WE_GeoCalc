@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<htm lang="de">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../scripts/showInformation.js"></script>
     <link rel="icon" href="../assets/2D/shapes.png" type="image/x-icon">
     <link rel="stylesheet" href="../styles.css">
     <title>Formelsammlung - Geo Calculator</title>
-    <script src="../scripts/showInformation.js"></script>
     <!-- <script src="../scripts/calculations.js"></script> -->
 </head>
 <body onload="loadBody()">
@@ -17,7 +17,7 @@
     <nav>
         <!-- DropDownMenu for Navigation on smaller Windows -->
         <div class="menu">
-            <a id="menu-list"><img src="../assets/bars-regular.svg" class="fa-big" alt=""></a>
+            <a id="menu-list"><img src="../assets/icons/bars-regular.svg" class="fa-big" alt=""></a>
             <ol class="dropdown-list" >
                 <li><a href="../index.html">Startseite</a></li>
                 <li><a href="./calculator.html">Rechner</a></li>
@@ -29,8 +29,8 @@
             <li>
                 <a>Formelsammlung</a>
                 <ol class="dropdown-list">
-                    <li><a href="#formulas-2D"><img src="../assets/square-regular.svg" class="fa" alt=""></img>2D</a></li>
-                    <li><a href="#formulas-3D"><img src="../assets/cube-regular.svg" class="fa" alt=""></img>3D</a></li>
+                    <li><a href="#formulas-2D"><img src="../assets/icons/square-regular.svg" class="fa" alt=""></img>2D</a></li>
+                    <li><a href="#formulas-3D"><img src="../assets/icons/cube-regular.svg" class="fa" alt=""></img>3D</a></li>
                     <li><a href="#formulas-overview">Übersicht</a></li>
 
                 </ol>
@@ -51,10 +51,10 @@
             <section class="info" id="info-square">
                 <h3>Quadrat</h3>
                 <h4>Flächenberechnung</h4>
-                <math xmlns = "http://www.w3.org/1998/Math/MathML"><mi>A</mi><mo>=</mo><mi>a</mi><mo>&middot</mo><mi>a</mi></math>
+                <math xmlns = "http://www.w3.org/1998/Math/MathML"><mi>A</mi><mo>=</mo><mi>a</mi><mo>&middot;</mo><mi>a</mi></math>
                 <h5>Erklärung</h5>
                 <aside>Die <em>Fläche</em> eines Quadrats berechnet sich aus der Seitenlänge a, die mit sich selbst multipliziert wird.</aside>
-                <a href="calculator.html"><button onclick="showCalc('square')">Zum Rechner</button></a>
+                <button onclick="showCalc('square')">Zum Rechner</button>
             </section>
 
             <!-- Information for Rectangle -->
@@ -62,10 +62,10 @@
             <section class="info" id="info-rectangle">
                 <h3>Rechteck</h3>
                 <h4>Flächenberechnung</h4>
-                <math xmlns = "http://www.w3.org/1998/Math/MathML"><mi>A</mi><mo>=</mo><mi>a</mi><mo>&middot</mo><mi>b</mi></math>
+                <math xmlns = "http://www.w3.org/1998/Math/MathML"><mi>A</mi><mo>=</mo><mi>a</mi><mo>&middot;</mo><mi>b</mi></math>
                 <h5>Erklärung</h5>
                 <aside>Die <em>Fläche</em> eines Rechtecks berechnet sich aus der Länge a und der Breite b, die miteinander multipliziert werden.</aside>
-                <a href="calculator.html"><button onclick="showCalc('rectangle')">Zum Rechner</button></a>
+                <button onclick="showCalc('rectangle')">Zum Rechner</button>
             </section>
 
             <!-- Information for Triangle -->
@@ -73,10 +73,10 @@
             <section class="info" id="info-triangle">
                 <h3>Dreieck</h3>
                 <h4>Flächenberechnung</h4>
-                <math xmlns = "http://www.w3.org/1998/Math/MathML"><mi>A</mi><mo>=</mo><mn>0,5</mn><mo>&middot</mo><mi>a</mi><mo>&middot</mo><mi>h</mi></math>
+                <math xmlns = "http://www.w3.org/1998/Math/MathML"><mi>A</mi><mo>=</mo><mn>0,5</mn><mo>&middot;</mo><mi>a</mi><mo>&middot;</mo><mi>h</mi></math>
                 <h5>Erklärung</h5>
                 <aside>Die <em>Fläche</em> eines Dreiecks berechnet sich aus der Grundseite a und der Höhe h, die miteinander multipliziert und durch 2 geteilt werden.</aside>
-                <a href="calculator.html"><button onclick="showCalc('triangle')">Zum Rechner</button></a>
+                <button onclick="showCalc('triangle')">Zum Rechner</button>
             </section>
 
             <!-- Information for Circle -->
@@ -85,10 +85,10 @@
                 <h3>Kreis</h3>
                 <h4>Flächenberechnung</h4>
                 <h5>Formel</h5>
-                <math xmlns = "http://www.w3.org/1998/Math/MathML"><mi>A</mi><mo>=</mo><mi>π</mi><mo>&middot</mo><msup><mi>r</mi><mn>2</mn></msup></math> 
+                <math xmlns = "http://www.w3.org/1998/Math/MathML"><mi>A</mi><mo>=</mo><mi>π</mi><mo>&middot;</mo><msup><mi>r</mi><mn>2</mn></msup></math> 
                 <h5>Erklärung</h5>
                 <aside>Die <em>Fläche</em> eines Kreises berechnet sich aus dem Radius r, der quadriert und mit π multipliziert wird.</aside>
-                <a href="calculator.html"><button onclick="showCalc('circle')">Zum Rechner</button></a>
+                <button onclick="showCalc('circle')">Zum Rechner</button>
             </section>
         </article>
 
@@ -104,7 +104,7 @@
                 <math xmlns = "http://www.w3.org/1998/Math/MathML"><mi>V</mi><mo>=</mo><msup><mi>a</mi><mn>3</mn></msup></math>
                 <h5>Erklärung</h5>
                 <aside>Das <em>Volumen</em> eines Würfels berechnet sich aus der Kantenlänge a, die mit sich selbst und noch einmal mit sich selbst multipliziert wird.</aside>
-                <a href="calculator.html"><button onclick="showCalc('cube')">Zum Rechner</button></a>
+                <button onclick="showCalc('cube')">Zum Rechner</button>
             </section>
 
             <!-- Information for Cuboid -->
@@ -112,10 +112,10 @@
             <section class="info" id="info-cuboid">
                 <h3>Quader</h3>
                 <h4>Volumenberechnung</h4>
-                <math xmlns = "http://www.w3.org/1998/Math/MathML"><mi>V</mi><mo>=</mo><mi>a</mi><mo>&middot</mo><mi>b</mi><mo>&middot</mo><mi>c</mi></math>
+                <math xmlns = "http://www.w3.org/1998/Math/MathML"><mi>V</mi><mo>=</mo><mi>a</mi><mo>&middot;</mo><mi>b</mi><mo>&middot;</mo><mi>c</mi></math>
                 <h5>Erklärung</h5>
                 <aside>Das <em>Volumen</em> eines Quaders berechnet sich aus den drei Seitenlängen a, b und c, die miteinander multipliziert werden.</aside>
-                <a href="calculator.html"><button onclick="showCalc('cuboid')">Zum Rechner</button></a>
+                <button onclick="showCalc('cuboid')">Zum Rechner</button>
             </section>
 
             <!-- Information for Pyramid -->
@@ -123,11 +123,11 @@
             <section class="info" id="info-pyramid">
                 <h3>Pyramide</h3>
                 <h4>Volumenberechnung</h4>
-                <math xmlns = "http://www.w3.org/1998/Math/MathML"><mi>V</mi><mo>=</mo><mfrac><mn>1</mn><mn>3</mn></mfrac><mo>&middot</mo><mi>G</mi><mo>&middot</mo><mi>h</mi></math>
+                <math xmlns = "http://www.w3.org/1998/Math/MathML"><mi>V</mi><mo>=</mo><mfrac><mn>1</mn><mn>3</mn></mfrac><mo>&middot;</mo><mi>G</mi><mo>&middot;</mo><mi>h</mi></math>
                 <h5>Erklärung</h5>
                 <aside>Das <em>Volumen</em> einer Pyramide berechnet sich aus der Grundfläche G und der Höhe h, die miteinander multipliziert und durch 3 geteilt werden.</aside>
                 <aside>Bei der Pyramide wird noch zusätzlich unterschieden, ob es um eine rechteckige oder dreieckige <em>Grundfläche</em> handelt.</aside>
-                <a href="calculator.html"><button onclick="showCalc('pyramid')">Zum Rechner</button></a>
+                <button onclick="showCalc('pyramid')">Zum Rechner</button>
             </section>
 
             <!-- Information for Sphere -->
@@ -135,10 +135,10 @@
             <section class="info" id="info-sphere">
                 <h3>Kugel</h3>
                 <h4>Volumenberechnung</h4>
-                <math xmlns = "http://www.w3.org/1998/Math/MathML"><mi>V</mi><mo>=</mo><mfrac><mn>4</mn><mn>3</mn></mfrac><mo>&middot</mo><mi>π</mi><mo>&middot</mo><msup><mi>r</mi><mn>3</mn></msup></math>
+                <math xmlns = "http://www.w3.org/1998/Math/MathML"><mi>V</mi><mo>=</mo><mfrac><mn>4</mn><mn>3</mn></mfrac><mo>&middot;</mo><mi>π</mi><mo>&middot;</mo><msup><mi>r</mi><mn>3</mn></msup></math>
                 <h5>Erklärung</h5>
                 <aside>Das <em>Volumen</em> einer Kugel berechnet sich aus dem Radius r, der mit sich selbst und noch einmal mit sich selbst multipliziert wird. Das Ergebnis wird mit 4/3 und π multipliziert.</aside>
-                <a href="calculator.html"><button onclick="showCalc('sphere')">Zum Rechner</button></a>
+                <button onclick="showCalc('sphere')">Zum Rechner</button>
             </section>
         </article>
 
@@ -165,7 +165,7 @@
             </tr>
             <tr>
                 <td>Quadrat</td>
-                <td><math xmlns = "http://www.w3.org/1998/Math/MathML"><mi>A</mi><mo>=</mo><mi>a</mi><mo>&middot</mo><mi>a</mi></math></td>
+                <td><math xmlns = "http://www.w3.org/1998/Math/MathML"><mi>A</mi><mo>=</mo><mi>a</mi><mo>&middot;</mo><mi>a</mi></math></td>
                 <td class="calc-button"><button onclick="showCalc('square')">rechnen</button></td>
 
                 <td>Würfel</td>
@@ -174,29 +174,29 @@
             </tr>
             <tr>
                 <td>Rechteck</td>
-                <td><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>A</mi><mo>=</mo><mi>a</mi><mo>&middot</mo><mi>b</mi></math></td>
+                <td><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>A</mi><mo>=</mo><mi>a</mi><mo>&middot;</mo><mi>b</mi></math></td>
                 <td class="calc-button"><button onclick="showCalc('rectangle')">rechnen</button></td>
 
                 <td>Quader</td>
-                <td><math xmlns = "http://www.w3.org/1998/Math/MathML"><mi>V</mi><mo>=</mo><mi>a</mi><mo>&middot</mo><mi>b</mi><mo>&middot</mo><mi>c</mi></math></td>
+                <td><math xmlns = "http://www.w3.org/1998/Math/MathML"><mi>V</mi><mo>=</mo><mi>a</mi><mo>&middot;</mo><mi>b</mi><mo>&middot;</mo><mi>c</mi></math></td>
                 <td class="calc-button"><button onclick="showCalc('cuboid')">rechnen</button></td>
             </tr>
             <tr>
                 <td>Dreieck</td>
-                <td><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>A</mi><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>&middot</mo><mi>a</mi><mo>&middot</mo><mi>h</mi></math></td>
+                <td><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>A</mi><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>&middot;</mo><mi>a</mi><mo>&middot;</mo><mi>h</mi></math></td>
                 <td class="calc-button"><button onclick="showCalc('triangle')">rechnen</button></td>
                 
                 <td>Pyramide</td>
-                <td><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>V</mi><mo>=</mo><mfrac><mn>1</mn><mn>3</mn></mfrac><mo>&middot</mo><mi>G</mi><mo>&middot</mo><mi>h</mi></math></td>
+                <td><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>V</mi><mo>=</mo><mfrac><mn>1</mn><mn>3</mn></mfrac><mo>&middot;</mo><mi>G</mi><mo>&middot;</mo><mi>h</mi></math></td>
                 <td class="calc-button"><button onclick="showCalc('pyramid')">rechnen</button></td>
             </tr>
             <tr>
                 <td>Kreis</td>
-                <td><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>A</mi><mo>=</mo><mi>π</mi><mo>&middot</mo><msup><mi>r</mi><mn>2</mn></msup></math></td>
+                <td><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>A</mi><mo>=</mo><mi>π</mi><mo>&middot;</mo><msup><mi>r</mi><mn>2</mn></msup></math></td>
                 <td class="calc-button"><button onclick="showCalc('circle')">rechnen</button></td>
                 
                 <td>Kugel</td>
-                <td><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>V</mi><mo>=</mo><mfrac><mn>4</mn><mn>3</mn></mfrac><mo>&middot</mo><mi>π</mi><mo>&middot</mo><msup><mi>r</mi><mn>3</mn></msup></math></td>
+                <td><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>V</mi><mo>=</mo><mfrac><mn>4</mn><mn>3</mn></mfrac><mo>&middot;</mo><mi>π</mi><mo>&middot;</mo><msup><mi>r</mi><mn>3</mn></msup></math></td>
                 <td class="calc-button"><button onclick="showCalc('sphere')">rechnen</button></td>
             </tr>
         </table>
@@ -209,10 +209,16 @@
         </div>
         <div id="footer-address">
             <address>
-                <p>Geschrieben von:</p><a href="mailto:info@scheerlestudios.de">Josia Scheerle</a>
+                <p>Website von:</p>
+                <div class="follow-wrap">
+                    <a href="https://www.instagram.com/scheerlestudios/" target="_blank"><div class="img-insta"></div></a>
+                    <a href="https://twitter.com/scheerlej" target="_blank"><div class="img-x"></div></a>
+                    <a href="https://github.com/ScheerleJo" target="_blank"><div class="img-github"></div></a>
+                    <a href="mailto:info@scheerlestudios.de" target="_blank"><div class="img-mail"></div></a>
+                </div>
             </address>
         </div>
-        <p id="last-edited"><small>© <time datetime="2024-07-11">12.07.2024</time> - GeoCalculator</small></p>
+        <p id="last-edited"><small>© <time datetime="2024-07-15">15.07.2024</time> - GeoCalculator</small></p>
     </footer>
 </body>
 </html>
